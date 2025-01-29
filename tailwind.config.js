@@ -5,11 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Agregar estilos personalizados aquí
+      colors: {
+        turquesa: '#00b8d4',  // Azul Turquesa
+        'turquesa-dark': '#008c96',  // Azul Turquesa Oscuro
+      }, // Aquí la coma después del objeto de colores
     },
   },
   plugins: [
-    // Plugin para scroll behavior
     function({ addUtilities }) {
       const newUtilities = {
         '.scroll-smooth': {
