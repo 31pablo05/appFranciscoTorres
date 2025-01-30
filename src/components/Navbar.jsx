@@ -1,24 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { FiMenu, FiX, FiHome, FiUser, FiActivity, FiMail, FiPhone } from 'react-icons/fi';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+    // Optimización del scroll con throttle
+    const handleScroll = useCallback(() => {
+        if (window.scrollY > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
     }, []);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [handleScroll]);
 
     const closeMenu = () => setMenuOpen(false);
 
     return (
         <nav
-            className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-turquesa-dark shadow-md' : 'bg-turquesa'} text-white p-4 flex justify-between items-center`}
+            className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-blue-900 shadow-md' : 'bg-blue-700'} text-white p-4 flex justify-between items-center`}
+            role="navigation"
         >
             {/* Logo del profesional */}
             <div className="flex items-center gap-4">
@@ -26,10 +35,9 @@ const Navbar = () => {
                     <img
                         src="/assets/logo/1.webp"
                         alt="Logo del Profesional"
-                        className="w-12 h-12 object-cover rounded-md shadow-md" // Reducir tamaño del logo
+                        className="w-12 h-12 object-cover rounded-md shadow-md"
                     />
                 </Link>
-                <h1 className="text-lg font-semibold text-turquesa-dark md:text-2xl">Osteopatía y Kinesiología <br /> Francisco Torres</h1> {/* Reducir tamaño del título en móviles */}
             </div>
 
             {/* Botón del menú hamburguesa */}
@@ -37,53 +45,66 @@ const Navbar = () => {
                 className="md:hidden"
                 aria-label="Abrir menú"
                 onClick={() => setMenuOpen(!menuOpen)}
+                aria-expanded={menuOpen ? 'true' : 'false'}
+                aria-controls="navbar-menu"
             >
                 {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
 
             {/* Menú de navegación */}
             <div
+                id="navbar-menu"
                 className={`md:flex md:space-x-6 md:w-auto md:flex-nowrap ${menuOpen ? 'block' : 'hidden'}
-                    absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-turquesa md:bg-transparent p-4 md:p-0 text-center md:text-left shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end`}
+                    absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-blue-700 bg-opacity-80 md:bg-transparent p-4 md:p-0 text-center md:text-left shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end transition-all duration-300 ease-in-out`}
             >
-                <Link
+                <NavLink
                     to="/"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
                     onClick={closeMenu}
+                    activeClassName="text-yellow-300"
+                    aria-label="Ir a la página de inicio"
                 >
                     <FiHome /> Inicio
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/about"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
                     onClick={closeMenu}
+                    activeClassName="text-yellow-300"
+                    aria-label="Ir a la sección Quién Soy"
                 >
                     <FiUser /> Quién Soy
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/osteopathy"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
                     onClick={closeMenu}
+                    activeClassName="text-yellow-300"
+                    aria-label="Ir a la sección Osteopatía"
                 >
                     <FiActivity /> Osteopatía
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/turnos-email"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
                     onClick={closeMenu}
+                    activeClassName="text-yellow-300"
+                    aria-label="Ir a la sección Turnos por Email"
                 >
                     <FiMail /> Turnos por Email
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to="/turnos-whatsapp"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
                     onClick={closeMenu}
+                    activeClassName="text-yellow-300"
+                    aria-label="Ir a la sección Turnos por WhatsApp"
                 >
                     <FiPhone /> Turnos por WhatsApp
-                </Link>
+                </NavLink>
             </div>
         </nav>
     );
-}
+};
 
 export default Navbar;

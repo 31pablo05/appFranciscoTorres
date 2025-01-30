@@ -1,29 +1,35 @@
 import React from 'react';
+import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa'; // Importar los íconos
 
 const About = () => {
     return (
-        <div className="bg-white py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold mb-6 text-teal-500">Quién Soy</h2>
+        <div className="bg-white py-20 px-6 mt-24">
+            <div className="max-w-6xl mx-auto">
+                <h2 className="text-5xl font-semibold mb-8 text-blue-700 text-center">Quién Soy</h2>
 
-                {/* Foto del profesional */}
-                <div className="mb-8">
-                    <img 
-                        src="https://via.placeholder.com/200" 
-                        alt="Francisco Torres - Osteópata" 
-                        className="w-40 h-40 rounded-full mx-auto border-4 border-teal-500 shadow-lg"
-                    />
+                {/* Sección de imagen y descripción */}
+                <div className="flex flex-col md:flex-row items-center justify-between mb-12">
+                    {/* Foto del profesional */}
+                    <div className="flex-shrink-0 mb-6 md:mb-0 md:w-1/3">
+                        <img 
+                            src="/assets/webp/profesional2.webp" 
+                            alt="Francisco Torres - Osteópata" 
+                            className="w-full h-full object-cover rounded-xl shadow-lg"
+                        />
+                    </div>
+
+                    {/* Descripción breve */}
+                    <div className="md:w-2/3 md:pl-10">
+                        <p className="text-2xl text-blue-900 mb-6">
+                            Soy Francisco Torres, osteópata con más de 10 años de experiencia en el cuidado de la salud física y el bienestar integral. Mi misión es mejorar tu calidad de vida a través de tratamientos personalizados que se adapten a tus necesidades específicas.
+                        </p>
+                    </div>
                 </div>
 
-                {/* Descripción breve */}
-                <p className="text-lg text-gray-700 mb-6">
-                    Soy Francisco Torres, osteópata con más de 10 años de experiencia en el cuidado de la salud física y el bienestar integral. Mi misión es mejorar tu calidad de vida a través de tratamientos personalizados que se adapten a tus necesidades específicas.
-                </p>
-
                 {/* Experiencia y formación */}
-                <div className="text-left mb-8">
-                    <h3 className="text-2xl font-semibold text-teal-500 mb-4">Mi Experiencia y Formación</h3>
-                    <ul className="list-disc ml-8 text-gray-600 text-lg">
+                <div className="text-left mb-12">
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Mi Experiencia y Formación</h3>
+                    <ul className="list-disc ml-8 text-blue-800 text-lg">
                         <li>Licenciado en Osteopatía por la Universidad X</li>
                         <li>Más de 10 años de experiencia trabajando con pacientes de diversas edades</li>
                         <li>Formación continua en técnicas avanzadas de osteopatía y fisioterapia</li>
@@ -32,9 +38,9 @@ const About = () => {
                 </div>
 
                 {/* Certificaciones */}
-                <div className="bg-teal-100 py-8 px-4 rounded-md shadow-md mb-8">
-                    <h3 className="text-2xl font-semibold text-teal-500 mb-4">Certificaciones y Logros</h3>
-                    <ul className="list-disc ml-8 text-gray-600 text-lg">
+                <div className="bg-blue-50 py-8 px-6 rounded-xl shadow-xl mb-12">
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Certificaciones y Logros</h3>
+                    <ul className="list-disc ml-8 text-blue-800 text-lg">
                         <li>Certificación en Osteopatía Avanzada, 2015</li>
                         <li>Diploma en Técnicas de Rehabilitación Postquirúrgica, 2017</li>
                         <li>Premio al Mejor Osteópata de la Región, 2020</li>
@@ -42,28 +48,28 @@ const About = () => {
                 </div>
 
                 {/* Enlaces a redes sociales */}
-                <div className="mb-8">
-                    <h3 className="text-2xl font-semibold text-teal-500 mb-4">Conéctate conmigo</h3>
-                    <p className="text-lg text-gray-700 mb-4">Puedes encontrarme en mis redes sociales profesionales:</p>
+                <div className="mb-12 text-center">
+                    <h3 className="text-3xl font-semibold text-blue-600 mb-4">Conéctate conmigo</h3>
+                    <p className="text-lg text-blue-900 mb-4">Puedes encontrarme en mis redes sociales:</p>
                     <div className="flex justify-center space-x-6">
-                        <a href="https://www.linkedin.com/in/francisco-torres" className="text-teal-500 hover:text-teal-600 transition-colors">
-                            LinkedIn
+                        <a href="https://www.instagram.com/francisco_torres" className="text-blue-600 hover:text-blue-700 transition-colors">
+                            <FaInstagram className="text-4xl" />
                         </a>
-                        <a href="https://twitter.com/francisco_torres" className="text-teal-500 hover:text-teal-600 transition-colors">
-                            Twitter
+                        <a href="https://www.facebook.com/francisco_torres" className="text-blue-600 hover:text-blue-700 transition-colors">
+                            <FaFacebookF className="text-4xl" />
                         </a>
-                        <a href="https://www.instagram.com/francisco_torres" className="text-teal-500 hover:text-teal-600 transition-colors">
-                            Instagram
+                        <a href="https://wa.me/1234567890" className="text-blue-600 hover:text-blue-700 transition-colors">
+                            <FaWhatsapp className="text-4xl" />
                         </a>
                     </div>
                 </div>
 
                 {/* Llamada a la acción */}
-                <div className="mt-8">
-                    <p className="text-lg text-gray-600 mb-4">¿Tienes alguna pregunta o quieres agendar una consulta? Estoy aquí para ayudarte.</p>
+                <div className="mt-12 text-center">
+                    <p className="text-lg text-blue-900 mb-4">¿Tienes alguna pregunta o quieres agendar una consulta? Estoy aquí para ayudarte.</p>
                     <a 
                         href="/appointments" 
-                        className="bg-teal-500 text-white py-2 px-6 rounded-md hover:bg-teal-600 transition-all"
+                        className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-all"
                     >
                         Solicita tu turno
                     </a>
