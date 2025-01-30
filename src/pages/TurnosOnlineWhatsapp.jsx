@@ -38,12 +38,12 @@ const TurnosOnlineWhatsapp = () => {
     }
 
     const mensajeWhatsApp = `
-      ¡Hola! Quiero agendar un turno con los siguientes datos:
+      ¡Hola! Quiero agendar un turno,estos son mis datos:
       Nombre: ${nombre} ${apellido}
       Teléfono: ${telefono}
       Email: ${email}
-      Fecha: ${fecha}
-      Hora: ${hora}
+      Fecha del turno: ${fecha}
+      Hora del turno: ${hora}
       ¡Gracias!
     `;
     const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
@@ -102,21 +102,23 @@ const TurnosOnlineWhatsapp = () => {
         </div>
 
         <div>
-          <input 
-            type="date" 
-            value={fecha}
-            onChange={(e) => setFecha(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-          />
+        <input 
+  type="date" 
+  value={fecha}
+  onChange={(e) => setFecha(e.target.value)} 
+  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+  title="Selecciona una fecha para el turno"
+/>
         </div>
 
         <div>
-          <input 
-            type="time" 
-            value={hora}
-            onChange={(e) => setHora(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-          />
+        <input 
+  type="time" 
+  value={hora}
+  onChange={(e) => setHora(e.target.value)} 
+  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+  title="Selecciona una hora para el turno"
+/>
         </div>
 
         <button type="submit" className="w-full p-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300 text-lg mt-4">
