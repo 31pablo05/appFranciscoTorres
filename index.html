@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Establece el conjunto de caracteres a UTF-8 para soportar caracteres especiales -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta etiqueta viewport para asegurar que la página sea responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- SEO -->
+    <!-- SEO: Título de la página que aparecerá en los resultados de búsqueda -->
     <title>Turnos Online | Osteopatía y Kinesiología</title>
-    <meta name="description" content="Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos." />
-    <meta name="keywords" content="osteopatía, kinesiología, salud, bienestar, turnos online" />
-    <meta name="author" content="Tu Nombre o Clínica" />
 
-    <!-- Open Graph (para redes sociales) -->
+    <!-- Descripción de la página que aparece en los resultados de búsqueda y redes sociales -->
+    <meta name="description" content="Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos." />
+
+    <!-- Palabras clave relevantes para SEO -->
+    <meta name="keywords" content="osteopatía, kinesiología, salud, bienestar, turnos online" />
+
+    <!-- Autor de la página, en este caso la clínica o profesional -->
+    <meta name="author" content="Tu Nombre o Clínica" />
+    
+    <!-- Meta para los robots de los motores de búsqueda para permitir indexar y seguir los enlaces -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph: Permite personalizar cómo se muestra la página en redes sociales -->
     <meta property="og:title" content="Turnos Online | Osteopatía y Kinesiología" />
     <meta property="og:description" content="Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos." />
+    <!-- Imagen que se muestra en las redes sociales -->
     <meta property="og:image" content="/src/assets/webp/osteopatia.webp" />
+    <!-- URL que se muestra en las redes sociales -->
     <meta property="og:url" content="https://tu-dominio.com" />
+    <!-- Tipo de contenido para Open Graph (en este caso es un sitio web) -->
     <meta property="og:type" content="website" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/src/assets/webp/osteopatia.webp" />
+    <!-- Datos estructurados en formato JSON-LD: Ayudan a los motores de búsqueda a entender mejor la información de la página -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Website",
+        "name": "Turnos Online | Osteopatía y Kinesiología",
+        "url": "https://tu-dominio.com",
+        "description": "Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos.",
+        "author": {
+          "@type": "Organization",
+          "name": "Tu Nombre o Clínica"
+        },
+        "image": "/src/assets/webp/osteopatia.webp"
+      }
+    </script>
 
-    <!-- Scripts -->
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Favicon: Icono que aparece en la pestaña del navegador -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/webp/osteopatia-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/webp/osteopatia-16x16.png" />
+    
+    <!-- Preconexión a recursos externos (mejora el rendimiento de la página cargando recursos de manera anticipada) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+    
+    <!-- Script del componente React principal -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </head>
   <body>
+    <!-- El div con id "root" es el contenedor donde React renderiza tu aplicación -->
     <div id="root"></div>
   </body>
 </html>
