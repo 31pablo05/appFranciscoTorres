@@ -60,13 +60,6 @@ const Osteopathy = () => {
                 </div>
             </div>
 
-            {/* Botón flotante de contacto */}
-            <div className="fixed bottom-10 right-10">
-                <Link to="/turnos-whatsapp" className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all">
-                    <i className="fas fa-phone-alt"></i> Contáctanos
-                </Link>
-            </div>
-
             {/* Botón scroll to top */}
             <div className="fixed bottom-10 left-10">
                 <button 

@@ -8,21 +8,20 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-6">
                     
                     {/* Información de contacto */}
-                    <div className="text-center md:text-left flex flex-col items-center md:items-start">
-                        <p>&copy; 2025 Osteopatía Francisco Torres. Todos los derechos reservados.</p>
-                        <p>Av. Ejemplo 123, Ciudad, País</p>
-                        <p>Tel: <a href="tel:+1234567890" className="hover:text-teal-400">+123 456 7890</a></p>
-                        <p>Email: <a href="mailto:info@osteopatía.com" className="hover:text-teal-400">info@osteopatía.com</a></p>
+                    <div className="text-left flex flex-col items-start space-y-2">
+                        <p className="text-lg">Jose de San Martín, Chubut, Argentina.</p>
+                        <p className="text-lg">Cel: <a href="tel:+1234567890" className="hover:text-teal-400 text-lg">+123 456 7890</a></p>
+                        <p className="text-lg">Email: <a href="mailto:info@osteopatía.com" className="hover:text-teal-400 text-lg">info@osteopatía.com</a></p>
                     </div>
 
                     {/* Enlaces importantes */}
                     <div className="flex justify-center md:justify-start space-x-6">
-                        <a href="/contact" className="hover:text-teal-400" aria-label="Enlace a la página de contacto">Contacto</a>
-                        <a href="/privacy-policy" className="hover:text-teal-400" aria-label="Enlace a la política de privacidad">Política de Privacidad</a>
+                        <a href="/contact" className="hover:text-teal-400 text-lg" aria-label="Enlace a la página de contacto">Contacto</a>
+                        <a href="/privacy-policy" className="hover:text-teal-400 text-lg" aria-label="Enlace a la política de privacidad">Política de Privacidad</a>
                     </div>
 
                     {/* Redes sociales */}
-                    <div className="flex justify-center md:justify-start space-x-6 text-2xl">
+                    <div className="flex justify-end space-x-6 text-3xl md:text-4xl">
                         <a 
                             href="https://wa.me/11234567890" 
                             target="_blank" 
@@ -58,6 +57,11 @@ const Footer = () => {
                             <FaEnvelope />
                         </a>
                     </div>
+                </div>
+
+                {/* Derechos reservados */}
+                <div className="text-center mt-6 text-sm">
+                    <p>&copy; 2025 Osteopatía Francisco Torres. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

@@ -62,20 +62,22 @@ const Home = () => {
             </div>
 
             {/* CTA Mejorado */}
-            <Section title="Empieza hoy tu camino hacia el bienestar óptimo" className="bg-gradient-to-r from-blue-500 to-teal-500 text-center text-white rounded-2xl shadow-lg">
-                <p className="mb-6 text-2xl font-semibold">
-                    No dejes que el dolor limite tu vida. Con un enfoque personalizado y terapias avanzadas, podemos ayudarte
-                    a recuperar tu equilibrio físico y mejorar tu calidad de vida. Agenda tu cita ahora y siente la diferencia
-                    desde la primera sesión.
-                </p>
-                <Link 
-                    to="/turnos-whatsapp"
-                    className="bg-white text-blue-600 py-4 px-8 rounded-lg shadow-xl hover:scale-105 transition-all text-lg font-medium"
-                    aria-label="Agendar cita vía WhatsApp"
-                >
-                    Agendar Cita
-                </Link>
-            </Section>
+<Section className="bg-gradient-to-r from-blue-500 to-teal-500 text-center text-white rounded-2xl shadow-lg py-12 px-6">
+    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-wide leading-tight">
+        Empieza hoy tu camino hacia el bienestar óptimo
+    </h2>
+    <p className="mb-8 text-lg sm:text-xl font-medium text-gray-100 opacity-90 max-w-4xl mx-auto">
+        "No permitas que el dolor limite tu vida. Con un enfoque personalizado y terapias avanzadas, te ayudamos a recuperar tu bienestar físico y mejorar tu calidad de vida. Agenda tu cita hoy y experimenta la diferencia desde la primera sesión."
+    </p>
+    <Link 
+        to="/turnos-whatsapp"
+        className="bg-white text-blue-600 py-4 px-8 rounded-lg shadow-xl hover:bg-blue-600 hover:text-white transition-all transform hover:scale-105 text-lg font-medium"
+        aria-label="Agendar cita vía WhatsApp"
+    >
+        Agendar Cita
+    </Link>
+</Section>
+   
 
             {/* Botón de WhatsApp */}
             <WhatsAppButton />
