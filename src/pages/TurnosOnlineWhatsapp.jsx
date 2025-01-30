@@ -54,7 +54,7 @@ const TurnosOnlineWhatsapp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gradient-to-r from-green-400 to-blue-500 rounded-lg shadow-xl p-8 max-w-lg mx-auto mt-20 md:mt-24 lg:mt-28">
+    <div className="flex flex-col items-center bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg shadow-xl p-8 max-w-lg mx-auto mt-20 md:mt-24 lg:mt-28">
       <h2 className="text-3xl font-semibold text-white text-center mb-6 uppercase tracking-wider">Reservar Turno</h2>
       <form onSubmit={crearTurno} className="w-full flex flex-col gap-6">
         <div>
@@ -63,7 +63,7 @@ const TurnosOnlineWhatsapp = () => {
             placeholder="Nombre" 
             value={nombre}
             onChange={(e) => setNombre(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
           {errores.campos && !nombre && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
         </div>
@@ -74,7 +74,7 @@ const TurnosOnlineWhatsapp = () => {
             placeholder="Apellido" 
             value={apellido}
             onChange={(e) => setApellido(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
           {errores.campos && !apellido && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
         </div>
@@ -85,7 +85,7 @@ const TurnosOnlineWhatsapp = () => {
             placeholder="Teléfono" 
             value={telefono}
             onChange={(e) => setTelefono(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
           {errores.telefono && <p className="text-red-500 text-sm mt-1">{errores.telefono}</p>}
         </div>
@@ -96,7 +96,7 @@ const TurnosOnlineWhatsapp = () => {
             placeholder="Email" 
             value={email}
             onChange={(e) => setEmail(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
           {errores.email && <p className="text-red-500 text-sm mt-1">{errores.email}</p>}
         </div>
@@ -106,7 +106,7 @@ const TurnosOnlineWhatsapp = () => {
             type="date" 
             value={fecha}
             onChange={(e) => setFecha(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
         </div>
 
@@ -115,17 +115,17 @@ const TurnosOnlineWhatsapp = () => {
             type="time" 
             value={hora}
             onChange={(e) => setHora(e.target.value)} 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
           />
         </div>
 
-        <button type="submit" className="w-full p-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300 text-lg mt-4">
+        <button type="submit" className="w-full p-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300 text-lg mt-4">
           Enviar
         </button>
       </form>
 
       {mensajeConfirmacion && (
-        <div className="mt-6 text-green-600 text-lg font-semibold text-center">{mensajeConfirmacion}</div>
+        <div className="mt-6 text-teal-600 text-lg font-semibold text-center">{mensajeConfirmacion}</div>
       )}
     </div>
   );

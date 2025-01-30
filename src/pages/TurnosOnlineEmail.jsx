@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import emailjs from 'emailjs-com';
 
 const TurnosOnlineEmail = () => {
@@ -104,105 +104,95 @@ const TurnosOnlineEmail = () => {
   };
 
   return (
-    <div className="bg-[#f0f0f0]">
-      <div className="flex flex-col items-center bg-gradient-to-r from-[#ff7e5f] to-[#feb47b] rounded-lg shadow-lg p-8 max-w-lg mx-auto mt-20 md:mt-24 lg:mt-28">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6 uppercase tracking-wide">Reservar Turno</h2>
-        {mensajeConfirmacion && <p className="text-green-600 mb-4">{mensajeConfirmacion}</p>}
-        <form onSubmit={enviarSolicitud} className="w-full flex flex-col gap-6 mb-32 mt-8">
-          {/* Nombre */}
-          <div>
-            <input 
-              type="text" 
-              placeholder="Nombre" 
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)} 
-              className={`w-full p-3 border ${errores.campos && !nombre ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.campos && !nombre && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
-          </div>
+    <div className="bg-gradient-to-r from-blue-500 to-teal-400 flex flex-col items-center rounded-lg shadow-xl p-8 max-w-lg mx-auto mt-20 md:mt-24 lg:mt-28">
+      <h2 className="text-3xl font-semibold text-white text-center mb-6 uppercase tracking-wider">Reservar Turno</h2>
+      {mensajeConfirmacion && <p className="text-teal-600 mb-4">{mensajeConfirmacion}</p>}
+      <form onSubmit={enviarSolicitud} className="w-full flex flex-col gap-6 mb-32 mt-8">
+        {/* Nombre */}
+        <div>
+          <input 
+            type="text" 
+            placeholder="Nombre" 
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+          {errores.campos && !nombre && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
+        </div>
 
-          {/* Apellido */}
-          <div>
-            <input 
-              type="text" 
-              placeholder="Apellido" 
-              value={apellido}
-              onChange={(e) => setApellido(e.target.value)} 
-              className={`w-full p-3 border ${errores.campos && !apellido ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.campos && !apellido && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
-          </div>
+        {/* Apellido */}
+        <div>
+          <input 
+            type="text" 
+            placeholder="Apellido" 
+            value={apellido}
+            onChange={(e) => setApellido(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+          {errores.campos && !apellido && <p className="text-red-500 text-sm mt-1">{errores.campos}</p>}
+        </div>
 
-          {/* Teléfono */}
-          <div>
-            <input 
-              type="tel" 
-              placeholder="Teléfono" 
-              value={telefono}
-              onChange={(e) => setTelefono(e.target.value)} 
-              className={`w-full p-3 border ${errores.telefono ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.telefono && <p className="text-red-500 text-sm mt-1">{errores.telefono}</p>}
-          </div>
+        {/* Teléfono */}
+        <div>
+          <input 
+            type="tel" 
+            placeholder="Teléfono" 
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+          {errores.telefono && <p className="text-red-500 text-sm mt-1">{errores.telefono}</p>}
+        </div>
 
-          {/* Email */}
-          <div>
-            <input 
-              type="email" 
-              placeholder="Email" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)} 
-              className={`w-full p-3 border ${errores.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.email && <p className="text-red-500 text-sm mt-1">{errores.email}</p>}
-          </div>
+        {/* Email */}
+        <div>
+          <input 
+            type="email" 
+            placeholder="Email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+          {errores.email && <p className="text-red-500 text-sm mt-1">{errores.email}</p>}
+        </div>
 
-          {/* Obra Social */}
-          <div>
-            <input 
-              type="text"
-              placeholder="Obra Social (opcional)" 
-              value={obraSocial}
-              onChange={(e) => setObraSocial(e.target.value)} 
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300"
-            />
-          </div>
+        {/* Fecha */}
+        <div>
+          <input 
+            type="date" 
+            value={fecha}
+            onChange={(e) => setFecha(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+        </div>
 
-          {/* Fecha */}
-          <div>
-            <input 
-              type="date" 
-              value={fecha}
-              onChange={(e) => setFecha(e.target.value)} 
-              className={`w-full p-3 border ${errores.fecha ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.fecha && <p className="text-red-500 text-sm mt-1">{errores.fecha}</p>}
-          </div>
+        {/* Hora */}
+        <div>
+          <input 
+            type="time" 
+            value={hora}
+            onChange={(e) => setHora(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+        </div>
 
-          {/* Hora */}
-          <div>
-            <input 
-              type="time" 
-              value={hora}
-              onChange={(e) => setHora(e.target.value)} 
-              className={`w-full p-3 border ${errores.hora ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition-all duration-300`}
-            />
-            {errores.hora && <p className="text-red-500 text-sm mt-1">{errores.hora}</p>}
-          </div>
+        {/* Obra Social */}
+        <div>
+          <input 
+            type="text" 
+            placeholder="Obra Social" 
+            value={obraSocial}
+            onChange={(e) => setObraSocial(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+          />
+        </div>
 
-          {/* Botón de Enviar */}
-          <button
-            type="submit"
-            className={`w-full p-3 bg-[#feb47b] hover:bg-[#ff7e5f] text-white font-semibold rounded-lg focus:outline-none transition-all duration-300 ${loading ? 'cursor-not-allowed' : ''}`}
-            disabled={loading}
-          >
-            {loading ? 'Enviando...' : 'Enviar Solicitud'}
-          </button>
-        </form>
-      </div>
+        <button type="submit" className="w-full p-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300 text-lg mt-4">
+          Enviar
+        </button>
+      </form>
     </div>
   );
 };
 
 export default TurnosOnlineEmail;
-

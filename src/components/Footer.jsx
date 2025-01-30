@@ -42,7 +42,7 @@ const Footer = () => {
                             <FaInstagram />
                         </a>
                         <a 
-                            href="https://www.facebook.com/osteopatía" 
+                            href="https://www.facebook.com/francisco.torres.37" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="hover:text-teal-400"
