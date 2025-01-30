@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
                 <Link to="/" aria-label="Ir a la página principal">
                     <img
-                        src="/assets/webp/1.webp"
+                        src="/assets/logo/1.webp"
                         alt="Logo del Profesional"
                         className="w-12 h-12 object-cover rounded-md shadow-md" // Reducir tamaño del logo
                     />
