@@ -28,7 +28,7 @@ const Home = () => {
                 {/* Imagen del profesional */}
                 <div className="md:w-1/2 flex justify-center">
                     <img
-                        src="/src/assets/webp/profesional.webp"
+                        src="/public/assets/webp/profesional.webp"
                         alt="Francisco Torres, osteópata profesional"
                         className="rounded-lg shadow-lg w-full max-w-lg object-cover"
                     />
