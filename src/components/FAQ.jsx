@@ -45,7 +45,7 @@ const FAQ = () => {
                             </span>
                         </div>
                         <div 
-                            className={`overflow-hidden transition-max-height duration-300 ${activeIndex === index ? "max-h-40 mt-2" : "max-h-0"}`}
+                            className={`overflow-hidden transition-max-height duration-300 ${activeIndex === index ? "max-h-[300px] mt-2" : "max-h-0"}`}
                         >
                             <p className="text-gray-700 text-md">{faq.answer}</p>
                         </div>

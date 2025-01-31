@@ -18,31 +18,36 @@ const Home = () => {
             {/* Hero Section */}
             <div className="pt-24 md:pt-32 px-4 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
                 <div className="text-center md:text-left md:w-1/2">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight max-w-xl">
-                        Excelencia en <span className="text-blue-600">Osteopatía y Kinesiología – Francisco Torres</span>
-                    </h1>
-                    <p className="mt-6 text-xl text-gray-700 leading-loose">
-                        Recupera tu bienestar y calidad de vida con tratamientos especializados en osteopatía y kinesiología.
-                        A través de un enfoque integral y terapias manuales avanzadas, ayudamos a reducir el dolor, mejorar la movilidad
-                        y potenciar tu salud de manera natural.
-                    </p>
+                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight max-w-2xl">
+  Lic. <span className="text-blue-600">Francisco Torres</span> 
+  <br /> 
+  <span className="text-3xl md:text-4xl font-semibold text-gray-800">
+    Especialista en <span className="text-blue-600">Osteopatía</span> y <span className="text-blue-600">Kinesiología</span>
+  </span>
+</h1>
+
+<p className="mt-6 text-xl md:text-2xl text-gray-700 leading-relaxed">
+  "Recupera tu bienestar y mejora tu calidad de vida con tratamientos especializados en <span className="font-semibold text-blue-600">osteopatía</span> y <span className="font-semibold text-blue-600">kinesiología</span>. A través de un enfoque integral y técnicas avanzadas, aliviamos el dolor, optimizamos tu movilidad y promovemos tu salud de forma natural."
+</p>
+
                 </div>
 
                 {/* Imagen */}
-                <div className="md:w-1/2 flex justify-center">
-                    <img
-                        src="/assets/webp/profesional.webp"
-                        alt="Francisco Torres, osteópata profesional"
-                        className="rounded-2xl shadow-xl w-full max-w-lg object-cover"
-                    />
-                </div>
+                <div className="md:w-1/2 flex justify-center p-4">
+    <img
+        src="/assets/webp/profesional.webp"
+        alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
+        className="rounded-2xl shadow-xl w-full max-w-lg object-cover transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+    />
+</div>
+
             </div>
 
             {/* Beneficios y Preguntas Frecuentes */}
             <div className="flex flex-col md:flex-row max-w-6xl w-full gap-6 md:gap-10 py-12 px-6">
                 <div className="w-full md:w-1/2 bg-white p-8 shadow-lg rounded-2xl max-w-md mx-auto">
                     <Section title="Beneficios de la Osteopatía">
-                        <ul className="text-lg text-gray-700 list-disc list-inside space-y-3">
+                        <ul className="text-xl font-semibold text-gray-800 list-disc list-inside space-y-4">
                             <li>Alivio del dolor muscular, articular y tensional</li>
                             <li>Mejora la movilidad y flexibilidad corporal</li>
                             <li>Optimiza la postura y corrige desequilibrios biomecánicos</li>
