@@ -24,6 +24,14 @@ const Navbar = () => {
 
     const closeMenu = () => setMenuOpen(false);
 
+    // Función para hacer scroll hacia arriba
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <nav
             className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-blue-900 shadow-md' : 'bg-blue-700'} text-white p-4 flex justify-between items-center`}
@@ -60,7 +68,7 @@ const Navbar = () => {
                 <NavLink
                     to="/"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={closeMenu}
+                    onClick={() => { closeMenu(); scrollToTop(); }}
                     activeClassName="text-yellow-300"
                     aria-label="Ir a la página de inicio"
                 >
@@ -69,7 +77,7 @@ const Navbar = () => {
                 <NavLink
                     to="/about"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={closeMenu}
+                    onClick={() => { closeMenu(); scrollToTop(); }}
                     activeClassName="text-yellow-300"
                     aria-label="Ir a la sección Quién Soy"
                 >
@@ -78,7 +86,7 @@ const Navbar = () => {
                 <NavLink
                     to="/osteopathy"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={closeMenu}
+                    onClick={() => { closeMenu(); scrollToTop(); }}
                     activeClassName="text-yellow-300"
                     aria-label="Ir a la sección Osteopatía"
                 >
@@ -87,7 +95,7 @@ const Navbar = () => {
                 <NavLink
                     to="/turnos-email"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={closeMenu}
+                    onClick={() => { closeMenu(); scrollToTop(); }}
                     activeClassName="text-yellow-300"
                     aria-label="Ir a la sección Turnos por Email"
                 >
@@ -96,7 +104,7 @@ const Navbar = () => {
                 <NavLink
                     to="/turnos-whatsapp"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={closeMenu}
+                    onClick={() => { closeMenu(); scrollToTop(); }}
                     activeClassName="text-yellow-300"
                     aria-label="Ir a la sección Turnos por WhatsApp"
                 >
