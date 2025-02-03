@@ -23,7 +23,7 @@ const Home = () => {
                 muted
                 className="fixed top-0 left-0 w-full h-full object-cover z-0"
             >
-                <source src="assets/videos/fondoosteopatia2.mp4" type="video/mp4" />
+                <source src="/src/assets/videos/fondoosteopatia2_1.webm" type="video/webm" />
                 Tu navegador no soporta video.
             </video>
 
