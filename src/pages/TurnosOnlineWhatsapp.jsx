@@ -47,7 +47,7 @@ const TurnosOnlineWhatsapp = () => {
       ¡Gracias!
     `;
     const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
-    window.location.href = `https://wa.me/542804389134?text=${mensajeCodificado}`;
+    window.location.href = `https://wa.me/5492945416969?text=${mensajeCodificado}`;
 
     setMensajeConfirmacion('Tu solicitud de turno ha sido enviada a través de WhatsApp. ¡Pronto recibirás la confirmación!');
     setErrores({}); // Limpiar errores al enviar exitosamente el formulario
