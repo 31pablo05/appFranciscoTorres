@@ -83,7 +83,7 @@ const Home = () => {
                 <Banner />
 
                 {/* Beneficios y Preguntas Frecuentes con Fade-In al hacer scroll */}
-                <div className="flex flex-col md:flex-row max-w-6xl w-full gap-6 md:gap-10 py-16 px-6">
+                <div className="flex flex-col md:flex-row max-w-6x1 mx-auto w-full gap-6 md:gap-10 py-12 px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ const Home = () => {
                     initial="hidden" 
                     animate="visible" 
                     variants={fadeInUp} 
-                    className="bg-gradient-to-r from-blue-500 to-teal-500 text-center text-white rounded-2xl shadow-lg py-12 px-6"
+                    className="bg-gradient-to-r from-blue-500 to-teal-500 text-center text-white rounded-2xl shadow-lg py-12 px-5 mb-12 "
                 >
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-wide leading-tight">
                         Empieza hoy tu camino hacia el bienestar óptimo

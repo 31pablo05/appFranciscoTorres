@@ -37,7 +37,11 @@ const Navbar = () => {
             className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${scrolled ? 'bg-blue-900 shadow-md' : 'bg-blue-700'} text-white p-4 flex justify-between items-center`}
             role="navigation"
         >
-          
+             {/* Logo alineado a la izquierda */}
+             <Link to="/" className="flex items-center gap-2" onClick={scrollToTop} aria-label="Ir a la página de inicio">
+             <img src="assets/logo/logo-francisco.webp" alt="Logo" className="h-12 rounded-md" />
+
+            </Link>
 
             {/* Botón del menú hamburguesa */}
             <button
