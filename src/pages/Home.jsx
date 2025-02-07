@@ -113,7 +113,7 @@ const Home = () => {
     className="w-full md:w-1/2 flex justify-center p-4 transform transition-all hover:scale-105 hover:shadow-2xl"
 >
     <motion.img
-        src="assets/webp/columnahm.webp" // Asegúrate de tener la imagen en la carpeta correcta
+        src="assets/webp/espalda-2.webp" // Asegúrate de tener la imagen en la carpeta correcta
         alt="Columna Vertebral"
         className="rounded-2xl shadow-xl w-full max-w-md object-cover border-4 border-transparent hover:border-blue-500 transition-all"
         whileHover={{ scale: 1.05 }}

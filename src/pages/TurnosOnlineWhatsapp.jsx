@@ -10,8 +10,42 @@ const TurnosOnlineWhatsapp = () => {
   const [mensajeConfirmacion, setMensajeConfirmacion] = useState('');
   const [errores, setErrores] = useState({});
 
+  // Horarios de atención
+  const horariosAtencion = {
+    lunes: { inicio: '10:30', fin: '17:00' },
+    martesViernes: { inicio: '16:00', fin: '20:00' },
+  };
+
   const validarTelefono = (telefono) => /^[0-9]{10}$/.test(telefono);
   const validarEmail = (email) => /^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+
+  // Validación de fecha y hora seleccionada
+  const validarFechaHora = (fecha, hora) => {
+    const hoy = new Date();
+    const fechaSeleccionada = new Date(fecha);
+    
+    // Validar que la fecha no sea ni sábado ni domingo
+    if (fechaSeleccionada.getDay() === 6 || fechaSeleccionada.getDay() === 0) {
+      return "No se pueden agendar turnos para sábados ni domingos.";
+    }
+
+    // Validar que la fecha esté al menos a un día de distancia
+    if (fechaSeleccionada < hoy.setDate(hoy.getDate() + 1)) {
+      return "Debe seleccionar una fecha con al menos un día de anticipación.";
+    }
+
+    // Validar que el horario esté dentro de los rangos permitidos
+    if (fechaSeleccionada.getDay() === 1) {
+      if (hora < horariosAtencion.lunes.inicio || hora > horariosAtencion.lunes.fin) {
+        return "El horario seleccionado no está disponible para los lunes.";
+      }
+    } else if (fechaSeleccionada.getDay() >= 2 && fechaSeleccionada.getDay() <= 5) {
+      if (hora < horariosAtencion.martesViernes.inicio || hora > horariosAtencion.martesViernes.fin) {
+        return "El horario seleccionado no está disponible para los martes a viernes.";
+      }
+    }
+    return null;
+  };
 
   const crearTurno = (e) => {
     e.preventDefault();
@@ -30,6 +64,12 @@ const TurnosOnlineWhatsapp = () => {
     // Validación de correo electrónico
     if (!validarEmail(email)) {
       erroresValidacion = { ...erroresValidacion, email: "Por favor, ingrese un correo electrónico válido." };
+    }
+
+    // Validación de fecha y hora
+    const errorFechaHora = validarFechaHora(fecha, hora);
+    if (errorFechaHora) {
+      erroresValidacion = { ...erroresValidacion, fechaHora: errorFechaHora };
     }
 
     if (Object.keys(erroresValidacion).length > 0) {
@@ -102,24 +142,27 @@ const TurnosOnlineWhatsapp = () => {
         </div>
 
         <div>
-        <input 
-  type="date" 
-  value={fecha}
-  onChange={(e) => setFecha(e.target.value)} 
-  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-  title="Selecciona una fecha para el turno"
-/>
+          <input 
+            type="date" 
+            value={fecha}
+            onChange={(e) => setFecha(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+            min={new Date().toISOString().split('T')[0]} // Deshabilita fechas pasadas
+            title="Selecciona una fecha para el turno"
+          />
         </div>
 
         <div>
-        <input 
-  type="time" 
-  value={hora}
-  onChange={(e) => setHora(e.target.value)} 
-  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-  title="Selecciona una hora para el turno"
-/>
+          <input 
+            type="time" 
+            value={hora}
+            onChange={(e) => setHora(e.target.value)} 
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+            title="Selecciona una hora para el turno"
+          />
         </div>
+
+        {errores.fechaHora && <p className="text-red-500 text-sm mt-1">{errores.fechaHora}</p>}
 
         <button type="submit" className="w-full p-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-300 text-lg mt-4">
           Enviar
