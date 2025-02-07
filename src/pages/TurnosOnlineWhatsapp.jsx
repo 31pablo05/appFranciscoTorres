@@ -34,16 +34,17 @@ const TurnosOnlineWhatsapp = () => {
       return "Debe seleccionar una fecha con al menos un día de anticipación.";
     }
 
-    // Validar que el horario esté dentro de los rangos permitidos
-    if (fechaSeleccionada.getDay() === 1) {
+    // Validar los horarios para los días lunes
+    if (fechaSeleccionada.getDay() === 1) {  // Lunes
       if (hora < horariosAtencion.lunes.inicio || hora > horariosAtencion.lunes.fin) {
-        return "El horario seleccionado no está disponible para los lunes.";
+        return "El horario seleccionado no está disponible para los lunes. Solo se permite de 10:30 a 17:00.";
       }
-    } else if (fechaSeleccionada.getDay() >= 2 && fechaSeleccionada.getDay() <= 5) {
+    } else if (fechaSeleccionada.getDay() === 2 || fechaSeleccionada.getDay() === 5) {  // Martes y Viernes
       if (hora < horariosAtencion.martesViernes.inicio || hora > horariosAtencion.martesViernes.fin) {
-        return "El horario seleccionado no está disponible para los martes a viernes.";
+        return "El horario seleccionado no está disponible para los martes y viernes. Solo se permite de 16:00 a 20:00.";
       }
     }
+
     return null;
   };
 
