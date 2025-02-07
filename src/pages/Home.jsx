@@ -104,6 +104,25 @@ const Home = () => {
                         </Section>
                     </motion.div>
 
+                     {/* Nueva sección con la imagen de la columna vertebral */}
+<motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="w-full md:w-1/2 flex justify-center p-4 transform transition-all hover:scale-105 hover:shadow-2xl"
+>
+    <motion.img
+        src="assets/webp/columnahm.webp" // Asegúrate de tener la imagen en la carpeta correcta
+        alt="Columna Vertebral"
+        className="rounded-2xl shadow-xl w-full max-w-md object-cover border-4 border-transparent hover:border-blue-500 transition-all"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+    />
+</motion.div>
+
+
+
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
