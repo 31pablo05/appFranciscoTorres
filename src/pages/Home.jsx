@@ -60,7 +60,7 @@ const Home = () => {
 
                     {/* Texto con presentación */}
                     <motion.div 
-                        className="text-center md:text-left w-full md:w-1/2 bg-black bg-opacity-50 p-6 rounded-lg order-last md:order-none"
+                        className="text-center md:text-left w-full md:w-1/2 mb-8 bg-black bg-opacity-50 p-6 rounded-lg order-last md:order-none"
                         initial={{ opacity: 0 }}  // Iniciar con opacidad cero
                         animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
                         transition={{ duration: 1, delay: 0.5 }}  // Retraso para que el texto aparezca después de la imagen
@@ -83,7 +83,7 @@ const Home = () => {
                 <Banner />
 
                 {/* Beneficios y Preguntas Frecuentes con Fade-In al hacer scroll */}
-                <div className="flex flex-col md:flex-row max-w-6x1 mx-auto w-full gap-6 md:gap-10 py-12 px-6">
+                <div className="flex flex-col md:flex-row max-w-6x1 w-full gap-6 md:gap-10 py-12 px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
