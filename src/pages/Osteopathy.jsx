@@ -18,6 +18,11 @@ const Osteopathy = () => {
                             alt="Osteopatía"
                             className="w-full h-auto rounded-lg shadow-lg"
                         />
+                        <img
+                            src="assets/webp/ostepatia4.webp"
+                            alt="Osteopatía"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                        />
                     </div>
                     <div className="w-full md:w-1/2 text-left text-lg text-gray-200">
                         <p className="mb-6 text-xl">
