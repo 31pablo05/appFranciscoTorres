@@ -39,7 +39,7 @@ const Navbar = () => {
         >
              {/* Logo alineado a la izquierda */}
              <Link to="/" className="flex items-center gap-2" onClick={scrollToTop} aria-label="Ir a la página de inicio">
-             <img src="assets/logo/logo-francisco.webp" alt="Logo" className="h-12 rounded-md" />
+             <img src="assets/logo/logoFrancisco1.webp" alt="Logo" className="h-16 rounded-md" />
 
             </Link>
 

@@ -7,7 +7,7 @@ const Banner = () => {
       {/* Logo alineado a la izquierda */}
       <div className="flex items-center mb-6 md:mb-0">
         <img
-          src="assets/logo/logo-francisco.webp" // Cambia esta ruta por la ubicación de tu logo
+          src="assets/logo/logoFrancisco1.webp" // Cambia esta ruta por la ubicación de tu logo
           alt="Logo"
           className="h-32 md:h-40 lg:h-48 w-auto mr-6 rounded-lg shadow-lg border-4 border-white transform transition-all hover:scale-105 hover:shadow-2xl"
         />

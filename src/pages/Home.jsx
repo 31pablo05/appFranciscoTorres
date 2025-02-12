@@ -52,7 +52,7 @@ const Home = () => {
                         animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
                     >
                         <img
-                            src="assets/webp/profesional.webp"
+                            src="assets/webp/francisco1.webp"
                             alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
                             className="rounded-2xl shadow-xl w-full max-w-lg object-cover"
                         />

@@ -89,7 +89,7 @@ const Osteopathy = () => {
                         controls
                         className="rounded-lg shadow-2xl transition-transform transform hover:scale-105"
                     >
-                        <source src="/path/to/your-video.mp4" type="video/mp4" />
+                        <source src="assets/videos/franciscovid1.mp4" type="video/mp4" />
                         Tu navegador no soporta el formato de video.
                     </video>
                 </div>
