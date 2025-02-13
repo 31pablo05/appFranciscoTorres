@@ -66,16 +66,17 @@ const Home = () => {
                         transition={{ duration: 1, delay: 0.5 }}  // Retraso para que el texto aparezca después de la imagen
                     >
                         <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight max-w-2xl">
-                            Lic. <span className="text-blue-600">Francisco Torres</span>
-                            <br />
-                            <span className="text-3xl md:text-4xl font-semibold text-white">
-                                Especialista en <span className="text-blue-600">Osteopatía</span> y <span className="text-blue-600">Kinesiología</span>
-                            </span>
-                        </h1>
+    Lic. <span className="text-blue-600">Francisco Torres</span>
+    <br />
+    <span className="text-3xl md:text-4xl font-semibold text-white">
+        Especialista en <span className="text-blue-600">Osteopatía</span> y <span className="text-blue-600">Kinesiología</span>
+    </span>
+</h1>
 
-                        <p className="mt-6 text-xl md:text-2xl text-white leading-relaxed">
-                            "Con más de <span className="font-semibold text-blue-600">10 años de experiencia</span>, ayudo a mis pacientes a recuperar su bienestar a través de tratamientos especializados en <span className="font-semibold text-blue-600">osteopatía</span> y <span className="font-semibold text-blue-600">kinesiología</span>. Mi enfoque integral y técnicas avanzadas permiten aliviar el dolor, optimizar la movilidad y mejorar la calidad de vida de manera natural."
-                        </p>
+<p className="mt-6 text-xl md:text-2xl text-white leading-relaxed text-justify">
+    "Con más de <span className="font-semibold text-blue-600">10 años de experiencia</span>, ayudo a mis pacientes a recuperar su bienestar a través de tratamientos especializados en <span className="font-semibold text-blue-600">osteopatía</span> y <span className="font-semibold text-blue-600">kinesiología</span>. Mi enfoque integral y técnicas avanzadas permiten aliviar el dolor, optimizar la movilidad y mejorar la calidad de vida de manera natural."
+</p>
+
                     </motion.div>
                 </motion.div>
 
