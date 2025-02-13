@@ -15,13 +15,13 @@ const Osteopathy = () => {
                     <div className="w-full md:w-1/2 pr-6 mb-6 md:mb-0">
                         <img
                             src="assets/webp/spine-model-standing-desk-unrecognizable-doctor.webp"
-                            alt="Osteopatía"
-                            className="w-full h-auto rounded-lg shadow-lg"
+                            alt="Modelo de columna vertebral de un osteópata usando equipo de oficina"
+                            className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                         <img
                             src="assets/webp/ostepatia4.webp"
-                            alt="Osteopatía"
-                            className="w-full h-auto rounded-lg shadow-lg"
+                            alt="Técnicas osteopáticas para tratamiento de columna"
+                            className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                     </div>
                     <div className="w-full md:w-1/2 text-left text-lg text-gray-200">
@@ -30,8 +30,8 @@ const Osteopathy = () => {
                         </p>
                         <img
                             src="assets/webp/ostepatia1.webp"
-                            alt="Técnicas de osteopatía"
-                            className="w-full h-auto rounded-lg shadow-lg mb-4"
+                            alt="Osteópata manipulando una columna vertebral de un paciente"
+                            className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
                         />
                         <p className="mb-6 text-xl">
                             La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con desajustes en el sistema musculoesquelético. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
@@ -44,13 +44,13 @@ const Osteopathy = () => {
                     <div className="w-full md:w-1/2 pl-6 mb-6 md:mb-0">
                         <img
                             src="assets/webp/osteopatia2.webp"
-                            alt="Técnicas de osteopatía"
-                            className="w-full h-auto rounded-lg shadow-lg mb-4"
+                            alt="Osteópata trabajando en una pierna de un paciente"
+                            className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
                         />
                         <img
                             src="assets/webp/osteopatia3.webp"
-                            alt="Técnicas de osteopatía"
-                            className="w-full h-auto rounded-lg shadow-lg"
+                            alt="Paciente recibiendo terapia de osteopatía"
+                            className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                     </div>
                     <div className="w-full md:w-1/2 text-left text-lg text-gray-200">
@@ -88,6 +88,7 @@ const Osteopathy = () => {
 
                 {/* Video de Osteopatía */}
                 <div className="mb-8">
+                    <p className="text-lg text-gray-200 mb-4">Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.</p>
                     <video
                         width="100%" 
                         height="400" 
@@ -115,27 +116,28 @@ const Osteopathy = () => {
 
                 {/* Llamada a la acción */}
                 <div className="mt-8">
-                    <p className="text-lg text-gray-200 mb-4">Para obtener más información o agendar una consulta, no dudes en ponerte en contacto con nosotros. Nuestro equipo estará encantado de atenderte.</p>
+                    <p className="text-lg text-gray-200 mb-4">Si estás interesado en un tratamiento osteopático personalizado, no dudes en ponerte en contacto con nosotros para más información.</p>
                     <Link 
-                        to="/turnos-whatsapp" 
-                        className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105"
+                        to="/contact" 
+                        className="bg-teal-600 text-white py-2 px-6 rounded-full text-xl hover:bg-teal-700 transition duration-300"
                     >
-                        Solicita tu consulta
+                        Contáctanos
                     </Link>
                 </div>
-            </div>
 
-            {/* Botón scroll to top */}
-            <div className="fixed bottom-10 left-10">
-                <button 
-                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} 
-                    className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all transform hover:scale-110"
-                >
-                    ↑
-                </button>
+                {/* Scroll to top */}
+                <div className="fixed bottom-4 right-4">
+                    <button 
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+                        className="bg-teal-600 p-3 rounded-full shadow-lg hover:bg-teal-700 transition duration-300"
+                        aria-label="Volver al principio"
+                    >
+                        <i className="fa fa-arrow-up text-white text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default Osteopathy;

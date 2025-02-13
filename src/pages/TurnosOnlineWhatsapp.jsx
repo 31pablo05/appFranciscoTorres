@@ -40,7 +40,7 @@ const TurnosOnlineWhatsapp = () => {
       return "Solo se pueden agendar turnos los lunes en Esquel.";
     }
 
-    if (localidad === 'Gobernador Costa' && diaSeleccionado === 1) {
+    if (localidad === 'Gobernador Costa' && diaSeleccionado === 0) {
       return "No se pueden agendar turnos los lunes en Gobernador Costa.";
     }
 
