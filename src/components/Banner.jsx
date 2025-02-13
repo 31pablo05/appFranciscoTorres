@@ -15,16 +15,17 @@ const Banner = () => {
 
       {/* Contenido del banner */}
       <div className="text-center md:text-left flex-1 mb-6 md:mb-0 md:ml-12 lg:ml-24">
-        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-8">Horarios de Atención</h2>
-        <p className="text-lg md:text-3xl">
-          <span className="font-semibold text-x3">Lunes:</span> 10:30 a 17:00 hs en{" "}
-          <span className="underline">ATM Odontología, Esquel</span>.
-        </p>
-        <p className="text-lg md:text-3xl mt-4">
-          <span className="font-semibold text-x3">Martes a Viernes:</span> 16:00 a 20:00 hs en{" "}
-          <span className="underline">Gobernador Costa</span>.
-        </p>
-      </div>
+    <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-8">Horarios de Atención</h2>
+    <p className="text-lg md:text-3xl text-justify">
+        <span className="font-semibold text-x3">Lunes:</span> 10:30 a 17:00 hs en{" "}
+        <span className="underline">ATM Odontología, Esquel</span>.
+    </p>
+    <p className="text-lg md:text-3xl text-justify mt-4">
+        <span className="font-semibold text-x3">Martes a Viernes:</span> 16:00 a 20:00 hs en{" "}
+        <span className="underline">Gobernador Costa</span>.
+    </p>
+</div>
+
 
       {/* Botón de "Reservar Turno" */}
       <div className="flex justify-center md:justify-start mt-6 md:mt-0">
