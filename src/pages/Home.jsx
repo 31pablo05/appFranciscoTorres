@@ -79,7 +79,7 @@ const Home = () => {
 
                     </motion.div>
                 </motion.div>
-
+                
                 {/* Banner con horarios de atención */}
                 <Banner />
 

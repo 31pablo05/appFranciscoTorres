@@ -81,10 +81,11 @@ const Osteopathy = () => {
                 </ul>
 
                 {/* ¿Cómo se realiza el tratamiento osteopático? */}
-                <h3 className="text-4xl font-semibold text-white mt-12 mb-6">¿Cómo se realiza el Tratamiento Osteopático?</h3>
-                <p className="text-lg text-gray-200 mb-8 px-4 leading-relaxed">
-                    El tratamiento osteopático comienza con un diagnóstico físico detallado del paciente. Este incluye una revisión exhaustiva de la historia médica del paciente, así como un examen físico. Con base en esta evaluación, los osteópatas aplican una variedad de técnicas manuales diseñadas para mejorar la circulación, aliviar el dolor y promover el movimiento adecuado de los músculos y las articulaciones.
-                </p>
+<h3 className="text-4xl font-semibold text-white mt-12 mb-6">¿Cómo se realiza el Tratamiento Osteopático?</h3>
+<p className="text-lg text-gray-200 mb-8 px-4 leading-relaxed text-justify">
+    El tratamiento osteopático comienza con un diagnóstico físico detallado del paciente. Este incluye una revisión exhaustiva de la historia médica del paciente, así como un examen físico. Con base en esta evaluación, los osteópatas aplican una variedad de técnicas manuales diseñadas para mejorar la circulación, aliviar el dolor y promover el movimiento adecuado de los músculos y las articulaciones.
+</p>
+
 
                 {/* Video de Osteopatía */}
                 <div className="mb-8">
@@ -118,7 +119,7 @@ const Osteopathy = () => {
                 <div className="mt-8">
                     <p className="text-lg text-gray-200 mb-4">Si estás interesado en un tratamiento osteopático personalizado, no dudes en ponerte en contacto con nosotros para más información.</p>
                     <Link 
-                        to="/contact" 
+                        to="/turnos-whatsapp" 
                         className="bg-teal-600 text-white py-2 px-6 rounded-full text-xl hover:bg-teal-700 transition duration-300"
                     >
                         Contáctanos
