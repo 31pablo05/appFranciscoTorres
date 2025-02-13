@@ -44,19 +44,22 @@ const Home = () => {
                     className="pt-24 md:pt-32 px-4 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto"
                 >
                     {/* Imagen con efecto de zoom al hover */}
-                    <motion.div 
-                        className="w-full md:w-1/2 flex justify-center p-4 order-first md:order-none"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                        initial={{ opacity: 0 }}  // Iniciar con opacidad cero
-                        animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
-                    >
-                        <img
-                            src="assets/webp/francisco1.webp"
-                            alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
-                            className="rounded-2xl shadow-xl w-full max-w-lg object-cover"
-                        />
-                    </motion.div>
+<motion.div
+    className="w-full md:w-1/2 flex justify-center p-4 order-first md:order-none"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+    initial={{ opacity: 0 }}  // Iniciar con opacidad cero
+    animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
+    // Ajuste para pantallas pequeñas
+    whileInView={{ opacity: 1 }}  // Asegura que la imagen sea visible cuando se ve en la pantalla
+>
+    <img
+        src="assets/webp/francisco1.webp"
+        alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
+        className="rounded-2xl shadow-xl w-full max-w-lg object-cover md:transition-all md:duration-300 md:hover:scale-105" 
+    />
+</motion.div>
+
 
                     {/* Texto con presentación */}
                     <motion.div 
