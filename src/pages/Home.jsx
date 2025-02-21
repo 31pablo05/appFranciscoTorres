@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
 import FAQ from "../components/FAQ";
 import Banner from "../components/Banner";
 import AplicacionesOsteopatia from "../components/AplicacionesOsteopatia";
@@ -31,7 +32,7 @@ const Home = () => {
     preload="auto"
     className="fixed top-0 left-0 w-full h-full object-cover z-0"
 >
-    <source src="assets/videos/fondoosteopatia2_1.webm" type="video/webm" />
+    <source src="assets/videos/fondoosteopatia3.webm" type="video/webm" />
     Tu navegador no soporta video.
 </video>
 
@@ -153,8 +154,7 @@ const Home = () => {
                         Empieza hoy tu camino hacia el bienestar óptimo
                     </h2>
                     <p className="mb-8 text-lg sm:text-xl font-medium text-gray-100 opacity-90 max-w-4xl mx-auto">
-                        "No permitas que el dolor limite tu vida. Con un enfoque personalizado y terapias avanzadas, te ayudamos a recuperar tu bienestar físico y mejorar tu calidad de vida. Agenda tu cita hoy y experimenta la diferencia desde la primera sesión."
-                    </p>
+                    "No te acostumbres al dolor. Con un enfoque personalizado y terapias avanzadas, te ayudamos a recuperar tu bienestar físico y a mejorar tu calidad de vida. Agenda tu cita hoy y siente la diferencia desde la primera sesión." </p>
                     <motion.Link
                         to="/turnos-whatsapp"
                         className="bg-white text-blue-600 py-4 px-8 rounded-lg shadow-xl text-lg font-medium"

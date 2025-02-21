@@ -26,16 +26,14 @@ const Osteopathy = () => {
                     </div>
                     <div className="w-full md:w-1/2 text-left text-lg text-gray-100 space-y-6">
                         <p className="mb-6 text-xl">
-                            La <strong>osteopatía</strong> es una práctica terapéutica basada en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en su relación con el sistema neurovegetativo, ya que ambos influyen en el equilibrio y bienestar general del organismo.
-                        </p>
+                        La <strong>osteopatía</strong> es una práctica terapéutica basada en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en su relación con el sistema neurovegetativo, ya que ambos influyen en el equilibrio y bienestar general del organismo. </p>
                         <img
                             src="assets/webp/ostepatia1.webp"
                             alt="Osteópata manipulando una columna vertebral de un paciente"
                             className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
                         />
                         <p className="mb-6 text-xl">
-                            La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con partes del cuerpo que han perdido su capacidad de moverse correctamente. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
-                        </p>
+                        La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con partes del cuerpo que han perdido su capacidad de moverse correctamente. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.    </p>
                     </div>
                 </div>
 
