@@ -69,14 +69,14 @@ const Home = () => {
   transition={{ duration: 1, delay: 0.3 }}  
 >
   <h1 className="text-3xl md:text-4xl font-bold leading-snug text-white">
-    Lic. <span className="text-blue-400">Francisco Torres</span>
+    Lic. <span className="text-blue-500">Francisco Torres</span>
     <br />
-    <span className="text-2xl md:text-3xl font-medium text-gray-300">
+    <span className="text-2xl md:text-3xl font-medium text-white text-opacity-300">
       Osteopatía & Kinesiología
     </span>
   </h1>
 
-  <p className="mt-4 text-lg md:text-xl text-gray-300 leading-relaxed">
+  <p className="mt-4 text-lg md:text-xl text-white text-opacity-300 leading-relaxed">
     "Más de <span className="font-semibold text-blue-400">10 años de experiencia</span> ayudando a recuperar movilidad y aliviar dolores con técnicas avanzadas en <span className="text-blue-400">osteopatía</span> y <span className="text-blue-400">kinesiología</span>."
   </p>
 </motion.div>

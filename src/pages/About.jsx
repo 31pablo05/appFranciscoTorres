@@ -37,7 +37,7 @@ const About = () => {
   </div>
   <div className="md:w-2/3 md:pl-10">
     {/* Título separado */}
-<h2 className="text-4xl text-white font-bold mb-4">
+    <h2 className="text-4xl text-white font-bold mb-4 p-4 rounded-lg bg-black bg-opacity-30 shadow-lg border-2 border-blue-900">
   <span className="inline-flex items-center text-4xl mr-2 wave">
     👋
   </span>
@@ -45,12 +45,10 @@ const About = () => {
 </h2>
 
     {/* Párrafo descriptivo */}
-    <p className="text-2xl text-white font-medium leading-relaxed">
-      Mi pasión es acompañarte en el camino hacia un cuerpo más saludable. Como osteópata, 
-      trabajo para que puedas sentirte mejor, sin dolor y con mayor libertad de movimiento. 
-      Mi objetivo es brindarte herramientas para que tu bienestar físico se convierta en una 
-      parte integral de tu vida diaria, sin importar los desafíos que enfrentes.
-    </p>
+<p className="text-2xl text-white font-medium leading-relaxed text-justify">
+  "Mi pasión es acompañarte en el camino hacia un cuerpo más saludable. Como osteópata, mi compromiso es ayudarte a recuperar tu bienestar físico, aliviando el dolor y mejorando tu movilidad. Mi objetivo es proporcionarte las herramientas necesarias para que el bienestar sea una parte integral de tu vida, sin importar los desafíos que enfrentes."
+</p>
+
   </div>
 </div>
 
