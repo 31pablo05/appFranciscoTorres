@@ -65,7 +65,7 @@ const About = () => {
                             onClick={() => openModal('assets/certificados/curso-kinésico-atm.webp')} 
                             className="cursor-pointer hover:text-blue-500 transition-all duration-300"
                         >
-                            <FaTrophy className="inline mr-2 text-yellow-500"/> "Curso de manejo kinésico ATM"
+                            <FaTrophy className="inline mr-2 text-yellow-500"/> "Certificacion de manejo kinésico ATM"
                         </li>
                         <li 
                             onClick={() => openModal('assets/certificados/diploma-rehabilitacion-postquirurgica.webp')} 
