@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="bg-blue-500 text-white p-6 md:p-12 lg:p-16 rounded-3xl shadow-xl w-full mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div className="mt-12 bg-blue-500 text-white p-6 md:p-12 lg:p-16 rounded-3xl shadow-xl w-full mx-auto flex flex-col md:flex-row items-center justify-between">
       {/* Logo alineado a la izquierda */}
       <div className="flex items-center mb-6 md:mb-0">
         <img

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import WhatsAppButton from "../components/WhatsAppButton";
 import FAQ from "../components/FAQ";
 import Banner from "../components/Banner";
+import AplicacionesOsteopatia from "../components/AplicacionesOsteopatia";
+
 
 const Section = ({ title, children, className }) => (
     <section className={`py-12 px-6 ${className}`}>
@@ -82,7 +84,8 @@ const Home = () => {
 
                     </motion.div>
                 </motion.div>
-                
+                <AplicacionesOsteopatia />
+
                 {/* Banner con horarios de atención */}
                 <Banner />
 
