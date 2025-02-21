@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaInstagram, FaFacebookF, FaWhatsapp, FaGraduationCap, FaBriefcase, FaTrophy } from 'react-icons/fa';
+import {FaHandPaper , FaInstagram, FaFacebookF, FaWhatsapp, FaGraduationCap, FaBriefcase, FaTrophy } from 'react-icons/fa';
 
 const About = () => {
     // Estado para manejar la visibilidad del modal y la imagen seleccionada
@@ -20,26 +20,41 @@ const About = () => {
 
     return (
         <div className="bg-gradient-to-r from-blue-600 to-teal-500 py-24 px-6">
-            <div className="max-w-6xl mx-auto text-white">
-                <h2 className="text-5xl font-semibold mb-8 mt-12 text-center hover:text-gray-300 transition-all duration-300">
-                    ¿Quién soy?
-                </h2>
+           <div className="max-w-6xl mx-auto text-white">
+    <h2 className="text-5xl font-semibold mb-8 mt-12 text-center hover:text-gray-300 transition-all duration-300">
+        ¿Quién soy?
+    </h2>
 
-                {/* Sección de imagen y descripción */}
-                <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-                    <div className="flex-shrink-0 mb-6 md:mb-0 md:w-1/3 relative overflow-hidden rounded-xl shadow-lg">
-                        <img 
-                            src="assets/webp/francisco1.webp" 
-                            alt="Francisco Torres - Osteópata en consulta" 
-                            className="w-full h-full object-cover rounded-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div className="md:w-2/3 md:pl-10">
-                        <p className="text-2xl text-white mb-6 font-medium leading-relaxed">
-                        "Mi nombre es Francisco Torres, y mi pasión es acompañarte en el camino hacia un cuerpo más saludable. Como osteópata, trabajo para que puedas sentirte mejor, sin dolor y con mayor libertad de movimiento. Mi objetivo es brindarte herramientas para que tu bienestar físico se convierta en una parte integral de tu vida diaria, sin importar los desafíos que enfrentes."                        </p>
-                    </div>
-                </div>
+    {/* Sección de imagen y descripción */}
+<div className="flex flex-col md:flex-row items-center justify-between mb-12">
+  <div className="flex-shrink-0 mb-6 md:mb-0 md:w-1/3 relative overflow-hidden rounded-xl shadow-lg">
+    <img 
+      src="assets/webp/francisco1.webp" 
+      alt="Francisco Torres - Osteópata en consulta" 
+      className="w-full h-full object-cover rounded-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
+      loading="lazy"
+    />
+  </div>
+  <div className="md:w-2/3 md:pl-10">
+    {/* Título separado */}
+<h2 className="text-4xl text-white font-bold mb-4">
+  <span className="inline-flex items-center text-4xl mr-2 wave">
+    👋
+  </span>
+  Hola, soy Francisco Torres Osteópata.
+</h2>
+
+    {/* Párrafo descriptivo */}
+    <p className="text-2xl text-white font-medium leading-relaxed">
+      Mi pasión es acompañarte en el camino hacia un cuerpo más saludable. Como osteópata, 
+      trabajo para que puedas sentirte mejor, sin dolor y con mayor libertad de movimiento. 
+      Mi objetivo es brindarte herramientas para que tu bienestar físico se convierta en una 
+      parte integral de tu vida diaria, sin importar los desafíos que enfrentes.
+    </p>
+  </div>
+</div>
+
+
 
                 {/* Caja de Experiencia y formación */}
                 <div className="bg-white p-8 rounded-xl shadow-lg mb-12 text-gray-900">

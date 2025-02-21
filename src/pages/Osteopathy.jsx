@@ -70,22 +70,27 @@ const Osteopathy = () => {
                     </div>
                 </div>
 
-                {/* ¿Cómo se realiza el tratamiento osteopático? */}
-                <h3 className="text-4xl font-semibold text-white mt-12 mb-6">¿Cómo se realiza el Tratamiento Osteopático?</h3>
+              {/* ¿Cómo se realiza el tratamiento osteopático? */}
+<h3 className="text-4xl font-semibold text-white mt-12 mb-6">
+  ¿Cómo se realiza el Tratamiento Osteopático?
+</h3>
 
-                {/* Video de Osteopatía */}
-                <div className="mb-8">
-                    <p className="text-lg text-gray-100 mb-4">Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.</p>
-                    <video
-                        width="100%" 
-                        height="400" 
-                        controls
-                        className="rounded-lg shadow-2xl transition-transform transform hover:scale-105"
-                    >
-                        <source src="assets/videos/franciscovid1.mp4" type="video/mp4" />
-                        Tu navegador no soporta el formato de video.
-                    </video>
-                </div>
+{/* Video de Osteopatía */}
+<div className="mb-8">
+  <p className="text-lg text-gray-100 mb-4">
+    Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.
+  </p>
+  <div className="w-full max-w-md mx-auto aspect-[4/3]">
+    <video
+      className="w-full h-full rounded-lg shadow-2xl transition-transform transform hover:scale-105 object-contain"
+      controls
+    >
+      <source src="assets/videos/osteopatia6.webm" type="video/mp4" />
+      Tu navegador no soporta el formato de video.
+    </video>
+  </div>
+</div>
+
 
                 {/* Beneficios de la osteopatía */}
                 <div className="mb-12">
