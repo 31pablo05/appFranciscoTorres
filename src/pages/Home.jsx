@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import WhatsAppButton from "../components/WhatsAppButton";
 import FAQ from "../components/FAQ";
 import Banner from "../components/Banner";
 import AplicacionesOsteopatia from "../components/AplicacionesOsteopatia";

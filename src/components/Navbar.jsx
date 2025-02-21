@@ -87,15 +87,7 @@ const Navbar = () => {
                 >
                     <FiActivity /> Osteopatía
                 </NavLink>
-                <NavLink
-                    to="/turnos-email"
-                    className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
-                    onClick={() => { closeMenu(); scrollToTop(); }}
-                    activeClassName="text-yellow-300"
-                    aria-label="Ir a la sección Turnos por Email"
-                >
-                    <FiMail /> Turnos por Email
-                </NavLink>
+                
                 <NavLink
                     to="/turnos-whatsapp"
                     className="block md:inline-block py-2 flex items-center gap-2 transition-colors duration-300 hover:text-yellow-300"
