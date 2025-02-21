@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 import FAQ from "../components/FAQ";
 import Banner from "../components/Banner";
 import AplicacionesOsteopatia from "../components/AplicacionesOsteopatia";
@@ -63,26 +62,26 @@ const Home = () => {
 </motion.div>
 
 
-                    {/* Texto con presentación */}
-                    <motion.div 
-                        className="text-center md:text-left w-full md:w-1/2 mb-8 bg-black bg-opacity-50 p-6 rounded-lg order-last md:order-none"
-                        initial={{ opacity: 0 }}  // Iniciar con opacidad cero
-                        animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
-                        transition={{ duration: 1, delay: 0.5 }}  // Retraso para que el texto aparezca después de la imagen
-                    >
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight max-w-2xl">
-    Lic. <span className="text-blue-600">Francisco Torres</span>
+<motion.div 
+  className="text-center md:text-left w-full md:w-1/2 mb-6 p-5 rounded-lg bg-black bg-opacity-60 shadow-lg"
+  initial={{ opacity: 0, y: 20 }}  
+  animate={{ opacity: 1, y: 0 }}  
+  transition={{ duration: 1, delay: 0.3 }}  
+>
+  <h1 className="text-3xl md:text-4xl font-bold leading-snug text-white">
+    Lic. <span className="text-blue-400">Francisco Torres</span>
     <br />
-    <span className="text-3xl md:text-4xl font-semibold text-white">
-        Especialista en <span className="text-blue-600">Osteopatía</span> y <span className="text-blue-600">Kinesiología</span>
+    <span className="text-2xl md:text-3xl font-medium text-gray-300">
+      Osteopatía & Kinesiología
     </span>
-</h1>
+  </h1>
 
-<p className="mt-6 text-xl md:text-2xl text-white leading-relaxed text-justify">
-    "Con más de <span className="font-semibold text-blue-600">10 años de experiencia</span>, ayudo a mis pacientes a recuperar su bienestar a través de tratamientos especializados en <span className="font-semibold text-blue-600">osteopatía</span> y <span className="font-semibold text-blue-600">kinesiología</span>. Mi enfoque integral y técnicas avanzadas permiten aliviar el dolor, optimizar la movilidad y mejorar la calidad de vida de manera natural."
-</p>
+  <p className="mt-4 text-lg md:text-xl text-gray-300 leading-relaxed">
+    "Más de <span className="font-semibold text-blue-400">10 años de experiencia</span> ayudando a recuperar movilidad y aliviar dolores con técnicas avanzadas en <span className="text-blue-400">osteopatía</span> y <span className="text-blue-400">kinesiología</span>."
+  </p>
+</motion.div>
 
-                    </motion.div>
+
                 </motion.div>
                 <AplicacionesOsteopatia />
 
