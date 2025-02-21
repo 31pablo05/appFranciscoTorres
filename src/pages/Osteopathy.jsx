@@ -6,7 +6,7 @@ const Osteopathy = () => {
         <div className="bg-gradient-to-r from-blue-600 to-teal-500 py-24 px-6">
             <div className="max-w-3xl mx-auto text-center">
                 {/* Título */}
-                <h2 className="text-5xl font-extrabold mb-8 text-white animate__animated animate__fadeInUp leading-snug">
+                <h2 className="text-5xl font-extrabold mb-8 text-white leading-snug animate__animated animate__fadeInUp">
                     ¿Qué es la Osteopatía?
                 </h2>
 
@@ -21,12 +21,12 @@ const Osteopathy = () => {
                         <img
                             src="assets/webp/ostepatia4.webp"
                             alt="Técnicas osteopáticas para tratamiento de columna"
-                            className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                            className="mt-12 w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                     </div>
-                    <div className="w-full md:w-1/2 text-left text-lg text-gray-200">
+                    <div className="w-full md:w-1/2 text-left text-lg text-gray-100 space-y-6">
                         <p className="mb-6 text-xl">
-                            La <strong>osteopatía</strong> es una práctica terapéutica que se basa en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en cómo estos sistemas pueden afectar a la salud en general.
+                            La <strong>osteopatía</strong> es una práctica terapéutica basada en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en su relación con el sistema neurovegetativo, ya que ambos influyen en el equilibrio y bienestar general del organismo.
                         </p>
                         <img
                             src="assets/webp/ostepatia1.webp"
@@ -34,62 +34,50 @@ const Osteopathy = () => {
                             className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
                         />
                         <p className="mb-6 text-xl">
-                            La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con desajustes en el sistema musculoesquelético. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
+                            La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con partes del cuerpo que han perdido su capacidad de moverse correctamente. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
                         </p>
                     </div>
                 </div>
 
                 {/* Segundo bloque de texto e imagen */}
-                <div className="flex flex-col md:flex-row-reverse items-center mb-12">
-                    <div className="w-full md:w-1/2 pl-6 mb-6 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center mb-12 gap-8">
+                    {/* Contenedor de imágenes */}
+                    <div className="w-full md:w-1/2 flex flex-col gap-6">
                         <img
-                            src="assets/webp/osteopatia2.webp"
-                            alt="Osteópata trabajando en una pierna de un paciente"
-                            className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
+                            src="assets/webp/sistema-nervioso1.webp"
+                            alt="Sistema nervioso 1"
+                            className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                         <img
-                            src="assets/webp/osteopatia3.webp"
-                            alt="Paciente recibiendo terapia de osteopatía"
+                            src="assets/webp/sistema-nervioso2.webp"
+                            alt="Sistema nervioso 2"
                             className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         />
                     </div>
-                    <div className="w-full md:w-1/2 text-left text-lg text-gray-200">
-                        <p className="mb-4 text-xl font-semibold">
-                            El cuerpo es una unidad: Todos los sistemas del cuerpo están interconectados y afectan a la salud de manera general.
+                    {/* Contenedor del texto */}
+                    <div className="w-full md:w-1/2 px-6 text-left space-y-4">
+                        <h2 className="text-2xl font-semibold text-gray-100 mb-4">Principios Fundamentales de la Osteopatía</h2>
+                        <p className="mb-4 text-lg text-gray-100">
+                            <strong>El cuerpo es una unidad:</strong> Todos los sistemas están interconectados. El sistema musculoesquelético, el sistema nervioso y el sistema circulatorio trabajan en sinergia para mantener la homeostasis y la salud global.
                         </p>
-                        <p className="mb-4 text-xl font-semibold">
-                            El cuerpo tiene capacidad de <strong>auto-regulación y auto-sanación</strong>: El cuerpo tiene su propio mecanismo de curación y los osteópatas ayudan a facilitarlo.
+                        <p className="mb-4 text-lg text-gray-100">
+                            <strong>Capacidad de autorregulación y autocuración:</strong> El cuerpo posee mecanismos innatos de reparación y equilibrio. La osteopatía busca liberar restricciones y mejorar la movilidad para optimizar estos procesos fisiológicos.
                         </p>
-                        <p className="mb-4 text-xl font-semibold">
-                            La estructura y la función están relacionadas: El estado físico de las partes del cuerpo, como los músculos y las articulaciones, puede influir en el funcionamiento de otros sistemas, como el sistema nervioso o el circulatorio.
+                        <p className="mb-4 text-lg text-gray-100">
+                            <strong>Relación entre estructura y función:</strong> Una alteración en la alineación articular, la tensión muscular o la movilidad fascial puede afectar el funcionamiento de órganos y sistemas, influyendo en el bienestar general.
                         </p>
-                        <p className="mb-4 text-xl font-semibold">
-                            El tratamiento debe considerar al paciente como un todo: Los osteópatas tratan no solo los síntomas, sino también las causas subyacentes de la dolencia, considerando la salud física, emocional y ambiental del paciente.
+                        <p className="font-semibold text-lg text-gray-200">
+                            El tratamiento osteopático se basa en identificar el origen del trauma, que puede ser de origen físico, químico o emocional, restaurando así el equilibrio del cuerpo de manera integral.
                         </p>
                     </div>
                 </div>
 
-                {/* Aplicaciones comunes de la osteopatía */}
-                <h3 className="text-4xl font-semibold text-white mt-12 mb-6">Aplicaciones comunes de la Osteopatía</h3>
-                <ul className="list-disc text-left text-xl mx-auto max-w-2xl text-gray-100">
-                    <li><strong>Tratamiento de dolor musculoesquelético:</strong> Espalda, cuello, hombros, etc.</li>
-                    <li><strong>Dolores articulares o de movimiento:</strong> Articulaciones de las extremidades.</li>
-                    <li><strong>Dolores de cabeza y migrañas.</strong></li>
-                    <li><strong>Trastornos digestivos:</strong> Como el estreñimiento.</li>
-                    <li><strong>Lesiones deportivas.</strong></li>
-                    <li><strong>Dolores posturales derivados de tensiones musculares.</strong></li>
-                </ul>
-
                 {/* ¿Cómo se realiza el tratamiento osteopático? */}
-<h3 className="text-4xl font-semibold text-white mt-12 mb-6">¿Cómo se realiza el Tratamiento Osteopático?</h3>
-<p className="text-lg text-gray-200 mb-8 px-4 leading-relaxed text-justify">
-    El tratamiento osteopático comienza con un diagnóstico físico detallado del paciente. Este incluye una revisión exhaustiva de la historia médica del paciente, así como un examen físico. Con base en esta evaluación, los osteópatas aplican una variedad de técnicas manuales diseñadas para mejorar la circulación, aliviar el dolor y promover el movimiento adecuado de los músculos y las articulaciones.
-</p>
-
+                <h3 className="text-4xl font-semibold text-white mt-12 mb-6">¿Cómo se realiza el Tratamiento Osteopático?</h3>
 
                 {/* Video de Osteopatía */}
                 <div className="mb-8">
-                    <p className="text-lg text-gray-200 mb-4">Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.</p>
+                    <p className="text-lg text-gray-100 mb-4">Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.</p>
                     <video
                         width="100%" 
                         height="400" 
@@ -104,7 +92,7 @@ const Osteopathy = () => {
                 {/* Beneficios de la osteopatía */}
                 <div className="mb-12">
                     <h3 className="text-4xl font-semibold text-white mb-4">Beneficios de la Osteopatía</h3>
-                    <ul className="list-disc text-left text-xl mx-auto max-w-2xl text-gray-100">
+                    <ul className="list-disc text-left text-xl mx-auto max-w-2xl text-gray-100 space-y-2">
                         <li>Alivio eficaz de dolores musculares y articulares crónicos y agudos.</li>
                         <li>Mejora de la circulación sanguínea y la flexibilidad articular.</li>
                         <li>Reducción del estrés y la tensión muscular, contribuyendo al bienestar general.</li>
@@ -117,7 +105,7 @@ const Osteopathy = () => {
 
                 {/* Llamada a la acción */}
                 <div className="mt-8">
-                    <p className="text-lg text-gray-200 mb-4">Si estás interesado en un tratamiento osteopático personalizado, no dudes en ponerte en contacto con nosotros para más información.</p>
+                    <p className="text-lg text-gray-100 mb-4">Si estás interesado en un tratamiento osteopático personalizado, no dudes en ponerte en contacto con nosotros para más información.</p>
                     <Link 
                         to="/turnos-whatsapp" 
                         className="bg-teal-600 text-white py-2 px-6 rounded-full text-xl hover:bg-teal-700 transition duration-300"
