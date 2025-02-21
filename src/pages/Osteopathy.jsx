@@ -81,13 +81,15 @@ const Osteopathy = () => {
     Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.
   </p>
   <div className="w-full max-w-md mx-auto aspect-[4/3]">
-    <video
-      className="w-full h-full rounded-lg shadow-2xl transition-transform transform hover:scale-105 object-contain"
-      controls
-    >
-      <source src="assets/videos/osteopatia6.webm" type="video/mp4" />
-      Tu navegador no soporta el formato de video.
-    </video>
+  <video
+  className="w-full h-full rounded-lg shadow-2xl transition-transform transform hover:scale-105 object-contain"
+  controls
+>
+  <source src="assets/videos/osteopatia6.webm" type="video/webm" />
+  <source src="assets/videos/osteopatia6.mp4" type="video/mp4" />
+  Tu navegador no soporta el formato de video.
+</video>
+
   </div>
 </div>
 
