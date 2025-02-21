@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Osteopathy from './pages/Osteopathy';
+import WhatsAppButton from './components/WhatsAppButton';
 
 import TurnosOnlineWhatsapp from './pages/TurnosOnlineWhatsapp';
 
@@ -25,7 +26,7 @@ const App = () => {
                         <Route path="/turnos-whatsapp" element={<TurnosOnlineWhatsapp />} />
                     </Routes>
                 </main>
-
+                <WhatsAppButton />
                 {/* Footer siempre visible */}
                 <Footer />
             </div>

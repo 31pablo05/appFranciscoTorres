@@ -13,65 +13,74 @@ const Osteopathy = () => {
     <div className="bg-gradient-to-r from-blue-600 to-teal-500 py-24 px-6">
       <div className="max-w-3xl mx-auto text-center">
         
-        {/* Sección: ¿Qué es la Osteopatía? */}
-        <section>
-          <motion.h2
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-5xl font-extrabold mb-8 text-white leading-snug"
-          >
-            ¿Qué es la Osteopatía?
-          </motion.h2>
-        </section>
+       {/* Sección: ¿Qué es la Osteopatía? */}
+       <section className="mb-16">
+      {/* Título y texto introductorio */}
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-5xl font-extrabold mb-6 text-white leading-snug"
+      >
+        ¿Qué es la Osteopatía?
+      </motion.h2>
+      <motion.p
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="text-xl text-gray-100 mb-10"
+>
+  La <strong>osteopatía</strong> es una práctica terapéutica basada en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en su relación con el sistema neurovegetativo, ya que ambos influyen en el equilibrio y bienestar general del organismo.
+</motion.p>
 
-        {/* Primer bloque de texto e imágenes */}
-        <section className="flex flex-col md:flex-row items-center mb-12">
-          <div className="w-full md:w-1/2 pr-6 mb-6 md:mb-0">
-            <motion.img
-              src="assets/webp/spine-model-standing-desk-unrecognizable-doctor.webp"
-              alt="Modelo de columna vertebral de un osteópata usando equipo de oficina"
-              className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
-              loading="lazy"
-              whileHover={{ scale: 1.05 }}
-            />
-            <motion.img
-              src="assets/webp/ostepatia4.webp"
-              alt="Técnicas osteopáticas para tratamiento de columna"
-              className="mt-12 w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
-              loading="lazy"
-              whileHover={{ scale: 1.05 }}
-            />
-          </div>
-          <div className="w-full md:w-1/2 text-left text-lg text-gray-100 space-y-6">
-            <motion.p
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mb-6 text-xl"
-            >
-              La <strong>osteopatía</strong> es una práctica terapéutica basada en la idea de que el cuerpo humano tiene una capacidad natural para curarse y mantenerse saludable. Los osteópatas se centran en el sistema musculoesquelético (huesos, músculos, articulaciones y tejidos conectivos) y en su relación con el sistema neurovegetativo, ya que ambos influyen en el equilibrio y bienestar general del organismo.
-            </motion.p>
-            <motion.img
-              src="assets/webp/ostepatia1.webp"
-              alt="Osteópata manipulando una columna vertebral de un paciente"
-              className="w-full h-auto rounded-lg shadow-lg mb-4 transition-transform transform hover:scale-105"
-              loading="lazy"
-              whileHover={{ scale: 1.05 }}
-            />
-            <motion.p
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mb-6 text-xl"
-            >
-              La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con partes del cuerpo que han perdido su capacidad de moverse correctamente. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
-            </motion.p>
-          </div>
-        </section>
+
+      {/* Galería de imágenes */}
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10"
+      >
+        <motion.img
+          src="assets/webp/osteopathy2.webp"
+          alt="Modelo de columna vertebral de un osteópata usando equipo de oficina"
+          className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+          loading="lazy"
+          whileHover={{ scale: 1.05 }}
+        />
+        <motion.img
+          src="assets/webp/spine-model-standing-desk-unrecognizable-doctor.webp"
+          alt="Técnicas osteopáticas para tratamiento de columna"
+          className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+          loading="lazy"
+          whileHover={{ scale: 1.05 }}
+        />
+        <motion.img
+          src="assets/webp/osteopathy.webp"
+          alt="Osteópata manipulando una columna vertebral de un paciente"
+          className="w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+          loading="lazy"
+          whileHover={{ scale: 1.05 }}
+        />
+      </motion.div>
+
+      {/* Texto complementario o conclusión */}
+      <motion.p
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  className="text-xl text-gray-100"
+>
+  La osteopatía utiliza una variedad de técnicas manuales, como masajes, manipulaciones articulares, estiramientos y ejercicios terapéuticos, para aliviar el dolor y mejorar el funcionamiento del cuerpo. En términos más simples, los osteópatas creen que muchas enfermedades y dolencias pueden estar relacionadas con partes del cuerpo que han perdido su capacidad de moverse correctamente. Al corregir estos desajustes, el cuerpo puede funcionar mejor y sanar de forma más eficaz.
+</motion.p>
+
+    </section>
+
+
 
         {/* Segundo bloque de texto e imágenes */}
         <section className="flex flex-col md:flex-row items-center mb-12 gap-8">
@@ -158,9 +167,6 @@ const Osteopathy = () => {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <p className="text-lg text-gray-100 mb-4">
-              Mira este video donde explicamos las técnicas osteopáticas utilizadas para tratar diversas dolencias.
-            </p>
             <div className="w-full max-w-md mx-auto aspect-[4/3]">
               <video
                 className="w-full h-full rounded-lg shadow-2xl transition-transform transform hover:scale-105 object-contain"
