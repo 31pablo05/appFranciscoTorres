@@ -215,7 +215,7 @@ const Osteopathy = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-lg text-gray-100 mb-4"
+            className="text-xl text-gray-100 mb-4"
           >
             Si estás interesado en un tratamiento osteopático personalizado, no dudes en ponerte en contacto con nosotros para más información.
           </motion.p>

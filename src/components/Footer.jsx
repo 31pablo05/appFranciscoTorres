@@ -68,7 +68,7 @@ const Footer = () => {
               <FaWhatsapp />
             </motion.a>
             <motion.a 
-              href="https://www.instagram.com/osteopatía" 
+              href="https://www.instagram.com/franciscotorresosteopatia?igsh=YzgzaW43aXg2NTB3&utm_source=qr" 
               target="_blank" 
               rel="noopener noreferrer" 
               whileHover={{ scale: 1.1, rotate: 5 }}

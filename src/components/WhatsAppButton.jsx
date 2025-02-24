@@ -1,8 +1,9 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '1234567890'; // Reemplaza con tu número de teléfono de WhatsApp
-  const message = '¡Hola! Me gustaría saber más sobre tus servicios.'; // Mensaje predefinido
+  const phoneNumber = '1234567890'; // Reemplaza con tu número
+  const message = '¡Hola! Me gustaría saber más sobre tus servicios.';
 
   const handleClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -12,10 +13,10 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-6 right-6 z-50 p-3 bg-green-500 rounded-full shadow-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 ease-in-out focus:outline-none flex items-center justify-center"
+      className="fixed bottom-6 right-6 z-50 p-4 bg-green-500 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 ease-in-out focus:outline-none flex items-center justify-center animate-bounce"
       aria-label="Contactar por WhatsApp"
     >
-      <i className="fab fa-whatsapp text-white text-4xl"></i> {/* Ajusté el tamaño del ícono */}
+      <FaWhatsapp className="text-white text-4xl" />
     </button>
   );
 };

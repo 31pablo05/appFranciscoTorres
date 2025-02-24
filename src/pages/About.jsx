@@ -64,7 +64,7 @@ const About = () => {
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Estudió en UIPTM</li>
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Asociación Argentina de Kinesiología</li>
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> SAINT-MONT France</li>
-                        <li><FaBriefcase className="inline mr-2 text-blue-500"/> Trabaja en la Cooperadora Hospital Roberto Gandini</li>
+                        <li><FaBriefcase className="inline mr-2 text-blue-500"/> Trabaja en Hospital rural Roberto Gandini</li>
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Trabaja en ATM Odontología</li>
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Trabajo en Quality Salud Esquel (2016-2020) </li>
                     </ul>
@@ -103,7 +103,7 @@ const About = () => {
 
                     <p className="text-lg text-gray-200 mb-4">Puedes encontrarme en mis redes sociales:</p>
                     <div className="flex justify-center space-x-6">
-                        <a href="https://www.instagram.com/francisco_torres" aria-label="Instagram Francisco Torres" className="text-white hover:text-gray-300 transition-colors">
+                        <a href="https://www.instagram.com/franciscotorresosteopatia?igsh=YzgzaW43aXg2NTB3&utm_source=qr" aria-label="Instagram Francisco Torres" className="text-white hover:text-gray-300 transition-colors">
                             <FaInstagram className="text-4xl" />
                         </a>
                         <a href="https://www.facebook.com/francisco_torres" aria-label="Facebook Francisco Torres" className="text-white hover:text-gray-300 transition-colors">
