@@ -149,19 +149,23 @@ const TurnosOnlineWhatsapp = () => {
           {errores.email && <p className="text-red-500 text-sm mt-1">{errores.email}</p>}
         </div>
 
-        <div>
-  <label htmlFor="fecha" className="block text-white text-lg mb-1">Fecha</label>
+        <div className="relative">
   <input
     id="fecha"
     type="date"
-    placeholder="Selecciona la fecha"
     value={fecha}
     onChange={(e) => setFecha(e.target.value)}
     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
     min={new Date().toISOString().split('T')[0]}
     title="Selecciona una fecha para el turno"
   />
+  { !fecha && (
+    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+      Selecciona la fecha
+    </span>
+  )}
 </div>
+
 
 <div className="relative">
   <input
