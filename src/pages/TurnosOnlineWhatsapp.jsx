@@ -160,12 +160,11 @@ const TurnosOnlineWhatsapp = () => {
     title="Selecciona una fecha para el turno"
   />
   { !fecha && (
-    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 md:hidden">
       Selecciona la fecha
     </span>
   )}
 </div>
-
 
 <div className="relative">
   <input
@@ -177,11 +176,12 @@ const TurnosOnlineWhatsapp = () => {
     title="Selecciona una hora para el turno"
   />
   { !hora && (
-    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 md:hidden">
       Selecciona la hora
     </span>
   )}
 </div>
+
 
 
 

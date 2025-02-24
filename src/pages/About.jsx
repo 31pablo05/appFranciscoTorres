@@ -56,7 +56,10 @@ const About = () => {
 
                 {/* Caja de Experiencia y formación */}
                 <div className="bg-white p-8 rounded-xl shadow-lg mb-12 text-gray-900">
-                    <h3 className="text-3xl font-semibold mb-4 flex items-center"><FaGraduationCap className="mr-2 text-blue-600"/> Mi experiencia y formación</h3>
+                <h3 className="text-3xl font-bold mb-4 flex items-center border-b-4 border-blue-600 pb-2">
+  <FaGraduationCap className="mr-2 text-blue-600"/> Mi experiencia y formación
+</h3>
+
                     <ul className="list-none space-y-2 text-lg">
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Licenciatura en Kinesiología y Fisiatría en la Universidad de Mendoza</li>
                         <li><FaBriefcase className="inline mr-2 text-blue-500"/> Escuela de Osteopatía de Madrid</li>
@@ -72,7 +75,10 @@ const About = () => {
 
                 {/* Caja de Certificaciones */}
                 <div className="bg-white p-8 rounded-xl shadow-xl mb-12 text-gray-900">
-                    <h3 className="text-3xl font-semibold mb-4 flex items-center"><FaTrophy className="mr-2 text-blue-600"/> Certificaciones y logros</h3>
+                <h3 className="text-3xl font-bold mb-4 flex items-center border-b-4 border-blue-600 pb-2">
+  <FaTrophy className="mr-2 text-blue-600" /> Certificaciones y logros
+</h3>
+
                     <ul className="list-none space-y-2 text-lg">
                     <li 
                             onClick={() => openModal('assets/certificados/curso-kinésico-atm.webp')} 
@@ -96,7 +102,25 @@ const About = () => {
                             onClick={() => openModal('assets/certificados/posgrado-rehabilitacion-cardiopulmonar.webp')} 
                             className="cursor-pointer hover:text-blue-500 transition-all duration-300"
                         >
+                            <FaTrophy className="inline mr-2 text-yellow-500"/> "Curso anual de posgrado en rehabilitación vestíbular"
+                        </li>
+                        <li 
+                            onClick={() => openModal('assets/certificados/posgrado-rehabilitacion-cardiopulmonar.webp')} 
+                            className="cursor-pointer hover:text-blue-500 transition-all duration-300"
+                        >
                             <FaTrophy className="inline mr-2 text-yellow-500"/> "Posgrado de Rehabilitación Cardiopulmonar en la Fundación René Favaloro"
+                        </li>
+                        <li 
+                            onClick={() => openModal('assets/certificados/posgrado-rehabilitacion-cardiopulmonar.webp')} 
+                            className="cursor-pointer hover:text-blue-500 transition-all duration-300"
+                        >
+                            <FaTrophy className="inline mr-2 text-yellow-500"/> "Posgrado en reeducación postural global"
+                        </li>
+                        <li 
+                            onClick={() => openModal('assets/certificados/posgrado-rehabilitacion-cardiopulmonar.webp')} 
+                            className="cursor-pointer hover:text-blue-500 transition-all duration-300"
+                        >
+                            <FaTrophy className="inline mr-2 text-yellow-500"/> "⁠Curso superior en RPG articular, cervicales"
                         </li>
                     </ul>
                 </div>
