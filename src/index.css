@@ -29,4 +29,8 @@
     animation: wave 2s ease-in-out infinite;
     transform-origin: 60% 100%; /* Ajusta este valor para desplazar el pivote hacia la derecha */
   }
-  
+  /* Para navegadores basados en WebKit (Chrome, Safari) */
+input[type="date"]:not(:focus):not([value])::-webkit-datetime-edit,
+input[type="time"]:not(:focus):not([value])::-webkit-datetime-edit {
+  color: transparent;
+}

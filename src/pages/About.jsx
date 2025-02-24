@@ -74,6 +74,12 @@ const About = () => {
                 <div className="bg-white p-8 rounded-xl shadow-xl mb-12 text-gray-900">
                     <h3 className="text-3xl font-semibold mb-4 flex items-center"><FaTrophy className="mr-2 text-blue-600"/> Certificaciones y logros</h3>
                     <ul className="list-none space-y-2 text-lg">
+                    <li 
+                            onClick={() => openModal('assets/certificados/curso-kinésico-atm.webp')} 
+                            className="cursor-pointer hover:text-blue-500 transition-all duration-300"
+                        >
+                            <FaTrophy className="inline mr-2 text-yellow-500"/> "C.O. Osteópata en escuela osteopatica de Madrid"
+                        </li>
                         <li 
                             onClick={() => openModal('assets/certificados/curso-kinésico-atm.webp')} 
                             className="cursor-pointer hover:text-blue-500 transition-all duration-300"
