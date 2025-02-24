@@ -33,14 +33,15 @@ const Navbar = () => {
     >
       {/* Logo con efecto de escalado al hover */}
       <Link to="/" className="flex items-center gap-2" onClick={scrollToTop} aria-label="Inicio">
-        <motion.img 
-          src="assets/logo/logoFrancisco1.webp" 
-          alt="Logo" 
-          className="h-16 rounded-md"
-          whileHover={{ scale: 1.2 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        />
-      </Link>
+  <motion.img 
+    src="assets/logo/logoFrancisco1.webp" 
+    alt="Logo" 
+    className="h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+    whileHover={{ scale: 1.2 }}
+    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+  />
+</Link>
+
 
       {/* Botón del menú hamburguesa */}
       <button
