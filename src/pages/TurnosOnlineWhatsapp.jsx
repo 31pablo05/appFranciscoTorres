@@ -150,27 +150,32 @@ const TurnosOnlineWhatsapp = () => {
         </div>
 
         <div>
-          <input
-            type="date"
-            placeholder="Fecha"
-            value={fecha}
-            onChange={(e) => setFecha(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-            min={new Date().toISOString().split('T')[0]}
-            title="Selecciona una fecha para el turno"
-          />
-        </div>
+  <label htmlFor="fecha" className="block text-white text-lg mb-1">Fecha</label>
+  <input
+    id="fecha"
+    type="date"
+    placeholder="Selecciona la fecha"
+    value={fecha}
+    onChange={(e) => setFecha(e.target.value)}
+    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+    min={new Date().toISOString().split('T')[0]}
+    title="Selecciona una fecha para el turno"
+  />
+</div>
 
-        <div>
-          <input
-            type="time"
-            placeholder="Hora"
-            value={hora}
-            onChange={(e) => setHora(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
-            title="Selecciona una hora para el turno"
-          />
-        </div>
+<div>
+  <label htmlFor="hora" className="block text-white text-lg mb-1">Hora</label>
+  <input
+    id="hora"
+    type="time"
+    placeholder="Selecciona la hora"
+    value={hora}
+    onChange={(e) => setHora(e.target.value)}
+    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
+    title="Selecciona una hora para el turno"
+  />
+</div>
+
 
         <div>
           <select
