@@ -163,18 +163,22 @@ const TurnosOnlineWhatsapp = () => {
   />
 </div>
 
-<div>
-  <label htmlFor="hora" className="block text-white text-lg mb-1">Hora</label>
+<div className="relative">
   <input
     id="hora"
     type="time"
-    placeholder="Selecciona la hora"
     value={hora}
     onChange={(e) => setHora(e.target.value)}
     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-lg"
     title="Selecciona una hora para el turno"
   />
+  { !hora && (
+    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+      Selecciona la hora
+    </span>
+  )}
 </div>
+
 
 
         <div>
