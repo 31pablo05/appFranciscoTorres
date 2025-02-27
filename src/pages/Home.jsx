@@ -36,7 +36,7 @@ const Home = () => {
           opacity: videoReady ? 1 : 0,
           transition: "opacity 0.5s ease"
         }}
-        poster="/assets/webp/fondoPoster.jpg"
+        poster="/assets/webp/fondoPoster.webp"
         className="fixed top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/assets/videos/fondoosteopatia3.webm" type="video/webm" />
@@ -47,50 +47,85 @@ const Home = () => {
             <div className="relative z-10 flex flex-col items-center">
                 {/* Hero Section con animación de fade-in y slide-up */}
                 <motion.div 
-                    initial="hidden" 
-                    animate="visible" 
-                    variants={fadeInUp}
-                    className="pt-24 md:pt-32 px-4 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto"
-                >
-                    {/* Imagen con efecto de zoom al hover */}
-<motion.div
-    className="w-full md:w-1/2 flex justify-center p-4 order-first md:order-none"
-    whileHover={{ scale: 1.05 }}
-    transition={{ duration: 0.3 }}
-    initial={{ opacity: 0 }}  // Iniciar con opacidad cero
-    animate={{ opacity: 1 }}  // Gradualmente aumentar la opacidad
-    // Ajuste para pantallas pequeñas
-    whileInView={{ opacity: 1 }}  // Asegura que la imagen sea visible cuando se ve en la pantalla
+  initial="hidden" 
+  animate="visible" 
+  variants={fadeInUp}
+  className="pt-24 md:pt-32 px-4 max-w-6xl mx-auto"
 >
-    <img
-        src="assets/webp/francisco1.webp"
+  {/* Versión para móviles: h1 sobre la imagen */}
+  <div className="block md:hidden">
+    <motion.div 
+      className="w-full text-center mb-2 mt-6 p-5 rounded-lg bg-black bg-opacity-60 shadow-lg"
+      initial={{ opacity: 0, y: 20 }}  
+      animate={{ opacity: 1, y: 0 }}  
+      transition={{ duration: 1, delay: 0.3 }}  
+    >
+      <h1 className="text-3xl md:text-4xl font-bold leading-snug text-white">
+        Lic. <span className="text-blue-500">Francisco Torres</span>
+        <br />
+        <span className="text-2xl md:text-3xl font-medium text-white text-opacity-300">
+          Osteopatía & Kinesiología
+        </span>
+      </h1>
+    </motion.div>
+    <motion.div
+      className="w-full flex justify-center p-4"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      whileInView={{ opacity: 1 }}
+    >
+      <img
+        src="/assets/webp/frantransparente3.webp"
         alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
         className="rounded-2xl shadow-xl w-full max-w-lg object-cover md:transition-all md:duration-300 md:hover:scale-105" 
+      />
+    </motion.div>
+  </div>
+
+ {/* Versión para PC: imagen con overlay del h1 en la parte inferior */}
+<div className="hidden md:block">
+  <motion.div
+    className="relative w-full flex justify-center p-4"
+    whileHover={{ scale: 1.05 }}
+    transition={{ duration: 0.3 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    whileInView={{ opacity: 1 }}
+  >
+    <img
+      src="/assets/webp/frantransparente3.webp"
+      alt="Francisco Torres, osteópata profesional, con amplia experiencia en tratamientos de osteopatía y kinesiología"
+      className="rounded-2xl shadow-xl w-full max-w-lg object-cover md:transition-all md:duration-300 md:hover:scale-105" 
     />
+    {/* Overlay del h1 posicionado en la parte inferior */}
+    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4">
+      <h1 className="text-3xl md:text-4xl font-bold leading-snug text-white bg-black bg-opacity-60 p-4 rounded">
+        Lic. <span className="text-blue-500">Francisco Torres</span>
+        <br />
+        <span className="text-2xl md:text-3xl font-medium text-white text-opacity-300">
+          Osteopatía & Kinesiología
+        </span>
+      </h1>
+    </div>
+  </motion.div>
+</div>
+
+
+  {/* Párrafo descriptivo (común para ambas vistas) */}
+  <motion.div 
+    className="w-full text-center mb-6 p-5 rounded-lg bg-black bg-opacity-60 shadow-lg mt-6"
+    initial={{ opacity: 0, y: 20 }}  
+    animate={{ opacity: 1, y: 0 }}  
+    transition={{ duration: 1, delay: 0.3 }}  
+  >
+    <p className="mt-4 text-lg md:text-xl text-white text-opacity-300 leading-relaxed">
+      "Más de <span className="font-semibold text-blue-400">10 años de experiencia</span> ayudando a recuperar movilidad y aliviar dolores con técnicas avanzadas en <span className="text-blue-400">osteopatía</span> y <span className="text-blue-400">kinesiología</span>."
+    </p>
+  </motion.div>
 </motion.div>
 
-
-<motion.div 
-  className="text-center md:text-left w-full md:w-1/2 mb-6 p-5 rounded-lg bg-black bg-opacity-60 shadow-lg"
-  initial={{ opacity: 0, y: 20 }}  
-  animate={{ opacity: 1, y: 0 }}  
-  transition={{ duration: 1, delay: 0.3 }}  
->
-  <h1 className="text-3xl md:text-4xl font-bold leading-snug text-white">
-    Lic. <span className="text-blue-500">Francisco Torres</span>
-    <br />
-    <span className="text-2xl md:text-3xl font-medium text-white text-opacity-300">
-      Osteopatía & Kinesiología
-    </span>
-  </h1>
-
-  <p className="mt-4 text-lg md:text-xl text-white text-opacity-300 leading-relaxed">
-    "Más de <span className="font-semibold text-blue-400">10 años de experiencia</span> ayudando a recuperar movilidad y aliviar dolores con técnicas avanzadas en <span className="text-blue-400">osteopatía</span> y <span className="text-blue-400">kinesiología</span>."
-  </p>
-</motion.div>
-
-
-                </motion.div>
                 <AplicacionesOsteopatia />
 
                 {/* Banner con horarios de atención */}
