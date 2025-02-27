@@ -29,10 +29,10 @@ const Home = () => {
     loop
     muted
     preload="auto"
+    playsInline
     className="fixed top-0 left-0 w-full h-full object-cover z-0"
 >
     <source src="assets/videos/fondoosteopatia3.webm" type="video/webm" />
-    Tu navegador no soporta video.
 </video>
 
 
