@@ -1,30 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import FAQ from "../components/FAQ";
 import Banner from "../components/Banner";
 import AplicacionesOsteopatia from "../components/AplicacionesOsteopatia";
 
-
 const Section = ({ title, children, className }) => (
-    <section className={`py-12 px-6 ${className}`}>
-        <h2 className="text-4xl md:text-5xl font-semibold text-blue-600 drop-shadow-md text-center md:text-left">
-            {title}
-        </h2>
-        <div className="mt-6 text-xl leading-loose text-gray-700">{children}</div>
-    </section>
+  <section className={`py-12 px-6 ${className}`}>
+    <h2 className="text-4xl md:text-5xl font-semibold text-blue-600 drop-shadow-md text-center md:text-left">
+      {title}
+    </h2>
+    <div className="mt-6 text-xl leading-loose text-gray-700">{children}</div>
+  </section>
 );
 
 const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } }
 };
 
 const Home = () => {
-    return (
-        <div className="relative flex flex-col items-center">
-            {/* Video de fondo con Parallax */}
-            <video
+  const [videoReady, setVideoReady] = useState(false);
+
+  return (
+    <div className="relative flex flex-col items-center">
+      {/* Video de fondo con Parallax */}
+      <video
         autoPlay
         loop
         muted
@@ -35,7 +36,7 @@ const Home = () => {
           opacity: videoReady ? 1 : 0,
           transition: "opacity 0.5s ease"
         }}
-        poster="assets/webp/fondoPoster.webp"
+        poster="/assets/webp/fondoPoster.webp"
         className="fixed top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/assets/videos/fondoosteopatia3.webm" type="video/webm" />
