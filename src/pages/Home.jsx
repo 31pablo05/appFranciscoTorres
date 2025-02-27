@@ -36,7 +36,7 @@ const Home = () => {
           opacity: videoReady ? 1 : 0,
           transition: "opacity 0.5s ease"
         }}
-        poster="/assets/webp/fondoPoster.webp"
+        poster="assets/webp/fondoPoster.jpg"
         className="fixed top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/assets/videos/fondoosteopatia3.webm" type="video/webm" />
