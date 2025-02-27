@@ -25,6 +25,7 @@ const Home = () => {
         <div className="relative flex flex-col items-center">
             {/* Video de fondo con Parallax */}
             <video
+            
     autoPlay
     loop
     muted
@@ -33,6 +34,7 @@ const Home = () => {
     className="fixed top-0 left-0 w-full h-full object-cover z-0"
 >
     <source src="assets/videos/fondoosteopatia3.webm" type="video/webm" />
+    <source src="assets/videos/fondoosteopatia3.mp4" type="video/mp4" />
 </video>
 
 
