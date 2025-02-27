@@ -3,7 +3,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
   const phoneNumber = '5492945416969'; // Número sin guiones ni espacios
-  const message = '¡Hola! Me gustaría saber más sobre tus servicios.';
+  const message = "¡Hola! Quiero reservar un turno de osteopatía. Por favor, indícame la fecha y confirma si es para:\n• Esquel (ATM Odontología, lunes 10:30–17:00 hs)\n• Gobernador Costa (martes a viernes, 16:00–20:00 hs)";
+  ;
 
   const handleClick = () => {
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
