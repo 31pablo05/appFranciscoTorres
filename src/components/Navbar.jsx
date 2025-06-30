@@ -31,19 +31,18 @@ const Navbar = () => {
       } backdrop-blur-sm text-white p-4 flex justify-between items-center`}
       role="navigation"
     >
-      {/* Logo con efecto de escalado al hover */}
+      {/* Logo con efecto de escalado y glow animado al hover */}
       <Link to="/" className="flex items-center gap-2" onClick={scrollToTop} aria-label="Inicio">
-  <motion.img 
-    src="/assets/logo/logoFrancisco1.webp" 
-    alt="Logo" 
-    className="h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
-    whileHover={{ scale: 1.2 }}
-    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-  />
-</Link>
+        <motion.img 
+          src="/assets/logo/logoFrancisco1.webp" 
+          alt="Logo" 
+          className="h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+          whileHover={{ scale: 1.22, boxShadow: '0 0 32px 8px #38bdf8' }}
+          transition={{ type: 'spring', stiffness: 350, damping: 18 }}
+        />
+      </Link>
 
-
-      {/* Botón del menú hamburguesa */}
+      {/* Botón del menú hamburguesa animado */}
       <button
         className="md:hidden focus:outline-none"
         aria-label="Abrir menú"
@@ -51,11 +50,17 @@ const Navbar = () => {
         aria-expanded={menuOpen ? 'true' : 'false'}
         aria-controls="navbar-menu"
       >
-        {menuOpen ? (
-          <FiX size={28} className="transition-transform transform hover:scale-110" />
-        ) : (
-          <FiMenu size={28} className="transition-transform transform hover:scale-110" />
-        )}
+        <motion.div
+          initial={false}
+          animate={menuOpen ? { rotate: 90, scale: 1.2 } : { rotate: 0, scale: 1 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          {menuOpen ? (
+            <FiX size={28} className="transition-transform transform hover:scale-110" />
+          ) : (
+            <FiMenu size={28} className="transition-transform transform hover:scale-110" />
+          )}
+        </motion.div>
       </button>
 
       {/* Menú de navegación */}
@@ -68,8 +73,9 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="md:flex md:space-x-8 md:w-auto absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-black bg-opacity-80 md:bg-transparent p-4 md:p-0 text-center shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end transition-all duration-300 ease-in-out"
+            className="md:flex md:space-x-8 md:w-auto absolute md:relative top-24 md:top-0 left-0 w-full md:w-auto bg-black bg-opacity-80 md:bg-transparent p-4 md:p-0 text-center shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end transition-all duration-300 ease-in-out"
           >
+            {/* Animación de subrayado en links activos */}
             <motion.div whileHover={{ scale: 1.05 }}>
               <NavLink
                 to="/"
@@ -78,9 +84,9 @@ const Navbar = () => {
                   scrollToTop();
                 }}
                 className={({ isActive }) =>
-                  "block md:inline-block py-2 transition-colors duration-300 " +
+                  "block md:inline-block py-2 transition-colors duration-300 relative " +
                   (isActive
-                    ? "text-teal-400 border-b-2 border-teal-400"
+                    ? "text-teal-400 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-blue-400 after:rounded-full after:animate-pulse"
                     : "text-white hover:text-teal-400")
                 }
                 aria-label="Inicio"
@@ -99,9 +105,9 @@ const Navbar = () => {
                   scrollToTop();
                 }}
                 className={({ isActive }) =>
-                  "block md:inline-block py-2 transition-colors duration-300 " +
+                  "block md:inline-block py-2 transition-colors duration-300 relative " +
                   (isActive
-                    ? "text-teal-400 border-b-2 border-teal-400"
+                    ? "text-teal-400 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-blue-400 after:rounded-full after:animate-pulse"
                     : "text-white hover:text-teal-400")
                 }
                 aria-label="Quién Soy"
@@ -120,9 +126,9 @@ const Navbar = () => {
                   scrollToTop();
                 }}
                 className={({ isActive }) =>
-                  "block md:inline-block py-2 transition-colors duration-300 " +
+                  "block md:inline-block py-2 transition-colors duration-300 relative " +
                   (isActive
-                    ? "text-teal-400 border-b-2 border-teal-400"
+                    ? "text-teal-400 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-blue-400 after:rounded-full after:animate-pulse"
                     : "text-white hover:text-teal-400")
                 }
                 aria-label="Osteopatía"
@@ -141,9 +147,9 @@ const Navbar = () => {
                   scrollToTop();
                 }}
                 className={({ isActive }) =>
-                  "block md:inline-block py-2 transition-colors duration-300 " +
+                  "block md:inline-block py-2 transition-colors duration-300 relative " +
                   (isActive
-                    ? "text-teal-400 border-b-2 border-teal-400"
+                    ? "text-teal-400 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-teal-400 after:to-blue-400 after:rounded-full after:animate-pulse"
                     : "text-white hover:text-teal-400")
                 }
                 aria-label="Turnos por WhatsApp"
