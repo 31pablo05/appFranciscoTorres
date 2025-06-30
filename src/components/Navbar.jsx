@@ -36,7 +36,7 @@ const Navbar = () => {
         <motion.img 
           src="/assets/logo/logoFrancisco1.webp" 
           alt="Logo" 
-          className="h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+          className="h-12 md:h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
           whileHover={{ scale: 1.22, boxShadow: '0 0 32px 8px #38bdf8' }}
           transition={{ type: 'spring', stiffness: 350, damping: 18 }}
         />
@@ -73,7 +73,7 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="md:flex md:space-x-8 md:w-auto absolute md:relative top-24 md:top-0 left-0 w-full md:w-auto bg-black bg-opacity-80 md:bg-transparent p-4 md:p-0 text-center shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end transition-all duration-300 ease-in-out"
+            className="md:flex md:space-x-8 md:w-auto absolute md:relative top-full md:top-0 left-0 right-0 w-full md:w-auto bg-black bg-opacity-80 md:bg-transparent p-4 md:p-0 text-center shadow-lg md:shadow-none flex flex-col md:flex-row md:justify-end transition-all duration-300 ease-in-out z-40"
           >
             {/* Animación de subrayado en links activos */}
             <motion.div whileHover={{ scale: 1.05 }}>
