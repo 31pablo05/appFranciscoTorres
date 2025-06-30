@@ -88,7 +88,7 @@ const fadeInUp = {
 
 const Home = () => {
   return (
-    <div className="relative flex flex-col items-center font-sans min-h-screen bg-transparent">
+    <div className="relative flex flex-col items-center font-sans min-h-screen bg-transparent overflow-x-hidden">
       {/* Fondo animado con ondas SVG azules y violetas */}
       <AnimatedWavesBackground />
       {/* Wrapper para contenido principal */}
