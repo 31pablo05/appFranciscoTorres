@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const AboutProfile = () => (
   <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mb-12 mt-8 md:mt-0 w-full">
     <motion.div
-      className="w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 flex-shrink-0 mb-6 md:mb-0 relative overflow-visible rounded-xl ml-0 md:ml-0 z-10 flex items-center justify-center shadow-2xl border-4 border-blue-200/40 bg-white/30"
+      className="w-64 h-96 sm:w-80 sm:h-[34rem] md:w-[28rem] md:h-[40rem] flex-shrink-0 mb-6 md:mb-0 relative overflow-visible rounded-xl ml-0 md:ml-0 z-10 flex items-center justify-center shadow-2xl border-4 border-blue-200/40 bg-white/30"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.3, type: 'spring', stiffness: 120 }}
@@ -14,7 +14,7 @@ const AboutProfile = () => (
         <img
           src="assets/webp/francisco1.webp"
           alt="Francisco Torres - Osteópata en consulta"
-          className="w-full h-full object-cover rounded-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
+          className="w-full h-full object-cover object-top rounded-xl transition-transform duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
           loading="lazy"
         />
         {/* Glow animado */}
