@@ -5,6 +5,11 @@ import AboutExperience from '../components/about/AboutExperience';
 import AboutCertifications from '../components/about/AboutCertifications';
 import AboutCTA from '../components/about/AboutCTA';
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, type: 'spring', stiffness: 80 } },
+};
+
 const About = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -19,15 +24,15 @@ const About = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, type: 'spring', stiffness: 80 }}
-            className="bg-gradient-to-r from-blue-600 to-teal-500 py-24 px-6"
-        >
-            <div className="max-w-6xl mx-auto text-white">
+        <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-700 via-teal-500 to-blue-800 px-2 sm:px-6 py-16">
+            <motion.div
+                variants={fadeInUp}
+                initial="hidden"
+                animate="visible"
+                className="max-w-4xl mx-auto w-full flex flex-col items-center"
+            >
                 <motion.h2
-                    className="text-5xl font-semibold mb-12 mt-12 text-center bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-400 bg-clip-text text-transparent drop-shadow-lg relative pt-8 md:pt-0 z-20 mb-16 pb-2"
+                    className="text-4xl md:text-5xl font-extrabold mb-10 mt-24 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-400 to-blue-700 drop-shadow-lg text-center"
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
@@ -54,8 +59,8 @@ const About = () => {
                         </div>
                     </div>
                 )}
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }
 

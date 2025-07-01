@@ -10,7 +10,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
-      className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-700 to-teal-700 text-white pt-14 pb-8 px-2 md:px-0 mt-20 shadow-2xl"
+      className="relative overflow-hidden bg-gradient-to-br from-blue-800 via-blue-700 to-teal-700 text-white pt-14 pb-8 px-2 md:px-0 shadow-2xl"
     >
       {/* Línea divisoria superior */}
       <div className="w-full h-1 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 opacity-70 mb-8" />
