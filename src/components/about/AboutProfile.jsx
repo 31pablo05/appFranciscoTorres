@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutProfile = () => (
-  <div className="flex flex-col md:flex-row items-center justify-between mb-12 mt-8 md:mt-0">
+  <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mb-12 mt-8 md:mt-0 w-full">
     <motion.div
-      className="flex-shrink-0 mb-6 md:mb-0 md:w-1/3 relative overflow-visible rounded-xl ml-8 md:ml-0 z-10"
+      className="w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 flex-shrink-0 mb-6 md:mb-0 relative overflow-visible rounded-xl ml-0 md:ml-0 z-10 flex items-center justify-center shadow-2xl border-4 border-blue-200/40 bg-white/30"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.3, type: 'spring', stiffness: 120 }}
       whileHover={{ scale: 1.04, boxShadow: '0 0 48px 8px #38bdf8' }}
     >
-      <div className="relative rounded-xl shadow-2xl border-4 border-blue-200/40 overflow-hidden">
+      <div className="relative w-full h-full flex items-center justify-center rounded-xl overflow-hidden">
         <img
           src="assets/webp/francisco1.webp"
           alt="Francisco Torres - Osteópata en consulta"
@@ -22,7 +22,7 @@ const AboutProfile = () => (
       </div>
     </motion.div>
     <motion.div
-      className="md:w-2/3 md:pl-10"
+      className="w-full md:w-2/3 md:pl-10 flex flex-col items-center md:items-start text-center md:text-left"
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.4, type: 'spring', stiffness: 120 }}
