@@ -34,9 +34,9 @@ const Navbar = () => {
       {/* Logo con efecto de escalado y glow animado al hover */}
       <Link to="/" className="flex items-center gap-2" onClick={scrollToTop} aria-label="Inicio">
         <motion.img 
-          src="/assets/logo/logoFrancisco1.webp" 
+          src="/assets/svg/Franciscologo.svg" 
           alt="Logo" 
-          className="h-12 md:h-16 rounded-md border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
+          className="h-20 md:h-28 rounded-xl border-4 border-blue-500 hover:shadow-lg hover:shadow-blue-500 transition-shadow duration-300"
           whileHover={{ scale: 1.22, boxShadow: '0 0 32px 8px #38bdf8' }}
           transition={{ type: 'spring', stiffness: 350, damping: 18 }}
         />

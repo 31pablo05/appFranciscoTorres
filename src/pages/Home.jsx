@@ -128,10 +128,8 @@ const Home = () => {
           <HomeCTA />
         </div>
       </div>
-      {/* Footer fuera del wrapper, siempre con su gradiente */}
-      <div className="relative z-20 w-full">
-        {/* <Footer /> */}
-      </div>
+
+      
     </div>
   );
 };
