@@ -1,122 +1,194 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaClock, FaMapMarkerAlt, FaCalendarDay } from "react-icons/fa";
+import { FaClock, FaMapMarkerAlt, FaCalendarDay, FaWhatsapp } from "react-icons/fa";
 
 const Banner = () => {
-  const [showTooltip, setShowTooltip] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const scheduleData = [
+    {
+      id: 1,
+      day: "Lunes",
+      time: "10:30 - 17:00 hs",
+      location: "ATM Odontología, Esquel",
+      icon: "🏥"
+    },
+    {
+      id: 2,
+      day: "Martes a Viernes",
+      time: "16:00 - 20:00 hs", 
+      location: "Gobernador Costa",
+      icon: "🏠"
+    }
+  ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, type: 'spring', stiffness: 80 }}
-      className="mt-14 bg-gradient-to-br from-blue-700 via-blue-500 to-teal-500 text-white p-8 md:p-14 lg:p-20 rounded-3xl shadow-2xl w-full max-w-4xl lg:max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between border-2 border-blue-300/30 relative overflow-hidden"
-    >
-      {/* Glow decorativo animado */}
+    <section className="py-16 px-4 sm:px-6">
       <motion.div
-        className="absolute -inset-4 bg-blue-400 opacity-20 blur-2xl pointer-events-none z-0 animate-pulse"
-        aria-hidden="true"
-      />
-      {/* Logo alineado a la izquierda con sombra animada */}
-      <div className="flex items-center mb-8 md:mb-0 z-10">
-        <motion.img
-          src="assets/logo/logoFrancisco1.webp"
-          alt="Logo"
-          className="h-32 md:h-40 lg:h-48 w-auto mr-6 rounded-2xl shadow-xl border-4 border-white/80 transition-all bg-white/10"
-          whileHover={{ scale: 1.12, rotate: 3, boxShadow: "0 0 32px 8px #38bdf8" }}
-          animate={{ boxShadow: [
-            "0 0 32px 0 #38bdf8",
-            "0 0 48px 8px #38bdf8",
-            "0 0 32px 0 #38bdf8"
-          ] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        />
-      </div>
-      {/* Contenido del banner con animación stagger */}
-      <motion.div
-        className="text-center md:text-left flex-1 mb-8 md:mb-0 md:ml-12 lg:ml-24 z-10"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.18 } }
-        }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 80 }}
+        className="max-w-6xl mx-auto"
       >
-        <motion.h2
-          className="text-3xl md:text-6xl font-extrabold mb-4 md:mb-8 flex items-center gap-3 drop-shadow-lg"
-          whileHover={{ scale: 1.03, color: '#fff' }}
-          transition={{ type: 'spring', stiffness: 300 }}
+        {/* Header Section */}
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
         >
-          <FaClock className="text-blue-200 text-3xl md:text-5xl animate-pulse" aria-hidden="true" />
-          Horarios de Atención
-        </motion.h2>
+          <div className="flex items-center justify-center gap-6 mb-6">
+            {/* Logo */}
+            <motion.img
+              src="/assets/svg/Franciscologo.svg"
+              alt="Francisco Torres Logo"
+              className="w-16 h-16 md:w-20 md:h-20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: [0, -5, 5, 0],
+                filter: "drop-shadow(0 0 20px rgba(34, 211, 238, 0.5))"
+              }}
+              transition={{ duration: 0.6 }}
+            />
+            
+            <motion.div
+              className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center"
+              whileHover={{ rotate: 360, scale: 1.1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <FaClock className="text-2xl text-blue-900" />
+            </motion.div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
+              Horarios de Atención
+            </h2>
+          </div>
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+            Encuentra el momento perfecto para tu consulta
+          </p>
+        </motion.div>
+
+        {/* Schedule Cards */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {scheduleData.map((schedule, index) => (
+            <motion.div
+              key={schedule.id}
+              className="group relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              onHoverStart={() => setHoveredCard(schedule.id)}
+              onHoverEnd={() => setHoveredCard(null)}
+            >
+              <motion.div
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 relative overflow-hidden h-full"
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 25px 50px rgba(0,0,0,0.2)"
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Card glow effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  animate={{
+                    background: hoveredCard === schedule.id 
+                      ? ["linear-gradient(45deg, rgba(34,211,238,0.1) 0%, rgba(59,130,246,0.1) 100%)",
+                         "linear-gradient(45deg, rgba(59,130,246,0.1) 0%, rgba(34,211,238,0.1) 100%)"]
+                      : "linear-gradient(45deg, rgba(34,211,238,0.1) 0%, rgba(59,130,246,0.1) 100%)"
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+                />
+                
+                <div className="relative z-10">
+                  {/* Day and Icon */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <motion.div
+                      className="text-3xl"
+                      animate={{ 
+                        rotate: hoveredCard === schedule.id ? [0, 10, -10, 0] : 0 
+                      }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      {schedule.icon}
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-1">
+                        {schedule.day}
+                      </h3>
+                      <div className="flex items-center gap-2 text-cyan-300">
+                        <FaCalendarDay className="text-lg" />
+                        <span className="text-lg font-semibold">{schedule.time}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-center gap-3 p-3 bg-white/10 rounded-lg border border-white/10">
+                    <FaMapMarkerAlt className="text-cyan-400 text-xl" />
+                    <span className="text-blue-100 font-medium">{schedule.location}</span>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
         <motion.div
-          className="flex flex-col gap-3 md:gap-5 my-4"
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
         >
           <motion.div
-            className="bg-white/10 rounded-xl px-3 py-3 shadow-md border border-blue-200/30 flex flex-col md:flex-row md:items-center md:inline-flex gap-1 md:gap-4 w-fit max-w-full"
-            whileHover={{ scale: 1.02, backgroundColor: '#fff', color: '#2563eb' }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="flex items-center gap-2 mb-1 md:mb-0">
-              <FaCalendarDay className="text-blue-400 text-xl md:text-3xl min-w-[1.5rem] min-h-[1.5rem] md:min-w-[1.75rem] md:min-h-[1.75rem]" aria-hidden="true" />
-              <span className="font-semibold text-base md:text-xl">Lunes:</span>
-              <span className="text-base md:text-xl">10:30 a 17:00 hs</span>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-100/30 rounded px-2 py-1 mt-1 md:mt-0">
-              <FaMapMarkerAlt className="text-blue-500 text-lg md:text-2xl" aria-hidden="true" />
-              <span className="underline text-base md:text-lg">ATM Odontología, Esquel</span>
-            </div>
-          </motion.div>
-          <motion.div
-            className="bg-white/10 rounded-xl px-3 py-3 shadow-md border border-blue-200/30 flex flex-col md:flex-row md:items-center md:inline-flex gap-1 md:gap-4 w-fit max-w-full"
-            whileHover={{ scale: 1.02, backgroundColor: '#fff', color: '#2563eb' }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
-            <div className="flex items-center gap-2 mb-1 md:mb-0">
-              <FaCalendarDay className="text-blue-400 text-xl md:text-3xl min-w-[1.5rem] min-h-[1.5rem] md:min-w-[1.75rem] md:min-h-[1.75rem]" aria-hidden="true" />
-              <span className="font-semibold text-base md:text-xl">Martes a Viernes:</span>
-              <span className="text-base md:text-xl">16:00 a 20:00 hs</span>
-            </div>
-            <div className="flex items-center gap-2 bg-blue-100/30 rounded px-2 py-1 mt-1 md:mt-0">
-              <FaMapMarkerAlt className="text-blue-500 text-lg md:text-2xl" aria-hidden="true" />
-              <span className="underline text-base md:text-lg">Gobernador Costa</span>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              ¿Listo para agendar tu consulta?
+            </h3>
+            <p className="text-blue-200 mb-6 text-lg">
+              Contactanos directamente para coordinar tu cita
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="https://wa.me/5492945416969"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center gap-3 transition-all duration-300 shadow-lg"
+                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaWhatsapp className="text-xl" />
+                WhatsApp
+              </motion.a>
+              
+              <motion.button
+                className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link to="/turnos-whatsapp" className="flex items-center justify-center gap-3">
+                  <FaCalendarDay />
+                  Formulario Online
+                </Link>
+              </motion.button>
             </div>
           </motion.div>
         </motion.div>
       </motion.div>
-      {/* Botón de "Reservar Turno" con tooltip */}
-      <div className="flex justify-center md:justify-start mt-8 md:mt-12 md:ml-12 z-50 relative w-full md:w-auto">
-        <motion.div
-          whileHover={{ scale: 1.09, boxShadow: "0 0 32px 8px #38bdf8" }}
-          transition={{ type: 'spring', stiffness: 350 }}
-          className="inline-block"
-          onMouseEnter={() => setShowTooltip(true)}
-          onMouseLeave={() => setShowTooltip(false)}
-        >
-          <Link
-            to="/turnos-whatsapp"
-            className="bg-white text-blue-700 py-4 px-8 rounded-xl shadow-xl text-lg font-bold tracking-wide border-2 border-blue-200 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
-            aria-label="Reservar Turno"
-          >
-            Reservar Turno
-          </Link>
-          {showTooltip && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.3 }}
-              className="fixed left-4 right-4 mx-auto bottom-20 md:static md:left-auto md:right-auto md:bottom-auto md:translate-x-0 md:mt-2 bg-blue-700 text-white text-base px-4 py-2 rounded-lg shadow-lg z-[9999] pointer-events-none w-auto max-w-xs md:w-auto md:max-w-none text-center"
-              style={{ minWidth: '0', whiteSpace: 'normal', lineHeight: '1.3' }}
-            >
-              ¡Tu bienestar empieza<br/>con un turno!
-            </motion.div>
-          )}
-        </motion.div>
-      </div>
-    </motion.div>
+    </section>
   );
 };
 

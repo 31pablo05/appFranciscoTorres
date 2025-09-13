@@ -1,90 +1,198 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaWhatsapp, FaCalendarAlt, FaHandHoldingMedical, FaHeart, FaCheckCircle } from "react-icons/fa";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } }
-};
+const HomeCTA = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, type: 'spring', stiffness: 80 } }
+  };
 
-const HomeCTA = () => (
-  <motion.div
-    initial="hidden"
-    animate="visible"
-    variants={fadeInUp}
-    whileHover={{ scale: 1.025, boxShadow: '0 0 64px 12px #38bdf8, 0 0 0 4px #fff3' }}
-    transition={{ type: 'spring', stiffness: 220 }}
-    className="relative overflow-hidden bg-gradient-to-r from-blue-500 via-teal-500 to-blue-400 text-center text-white rounded-3xl shadow-2xl py-14 px-4 sm:px-7 mb-16 mx-2 sm:mx-0 flex flex-col items-center group"
-  >
-    {/* Glow animado mejorado */}
-    <motion.div
-      className="absolute -inset-4 bg-gradient-to-br from-blue-400 via-teal-400 to-blue-400 opacity-40 blur-3xl animate-pulse z-0 pointer-events-none"
-      aria-hidden="true"
-      animate={{
-        scale: [1, 1.08, 1],
-        rotate: [0, 8, -8, 0],
-        filter: [
-          'blur(36px) brightness(1.1)',
-          'blur(48px) brightness(1.2)',
-          'blur(36px) brightness(1.1)'
-        ]
-      }}
-      transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-    />
-    {/* Destello animado en el borde */}
-    <motion.div
-      className="absolute inset-0 rounded-3xl border-4 border-transparent pointer-events-none z-10"
-      initial={{ borderColor: 'rgba(56,189,248,0.0)' }}
-      animate={{
-        borderColor: [
-          'rgba(56,189,248,0.0)',
-          'rgba(56,189,248,0.5)',
-          'rgba(56,189,248,0.0)'
-        ]
-      }}
-      transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
-      style={{ boxShadow: '0 0 32px 8px #38bdf8aa' }}
-    />
-    <div className="relative z-20 flex flex-col items-center">
-      <motion.h2
-        className="relative text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 tracking-wide leading-tight drop-shadow-lg bg-gradient-to-r from-blue-700 via-cyan-300 to-blue-900 bg-clip-text text-transparent animate-pulse"
-        style={{ WebkitTextStroke: '1.5px #fff', textShadow: '0 2px 16px #2563eb55' }}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, type: 'spring', stiffness: 120 }}
-      >
-        <span className="relative inline-block">
-          Empieza hoy tu camino hacia el bienestar óptimo
-          {/* Shine animado */}
-          <span className="absolute left-0 top-0 w-full h-full pointer-events-none overflow-hidden rounded-2xl">
-            <span className="block w-1/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent blur-lg opacity-40 animate-[shine_2.5s_linear_infinite]" style={{filter:'blur(8px)'}}></span>
-          </span>
-        </span>
-      </motion.h2>
-      <motion.p
-        className="mb-8 text-lg sm:text-xl font-medium text-gray-100 opacity-90 max-w-4xl mx-auto animate-fadeIn"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2 }}
-      >
-        &quot;No te acostumbres al dolor. Con un enfoque personalizado y terapias avanzadas, te ayudamos a recuperar tu bienestar físico y a mejorar tu calidad de vida. Agenda tu cita hoy y siente la diferencia desde la primera sesión.&quot;
-      </motion.p>
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const features = [
+    { icon: FaHandHoldingMedical, text: "Enfoque personalizado" },
+    { icon: FaHeart, text: "Terapias avanzadas" },
+    { icon: FaCheckCircle, text: "Resultados desde la primera sesión" }
+  ];
+
+  return (
+    <section className="py-20 px-4 sm:px-6 relative overflow-hidden">
+      {/* Background with animated elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-teal-600/30 to-blue-800/50 backdrop-blur-sm" />
+      
+      {/* Floating orbs animation */}
       <motion.div
-        whileHover={{ scale: 1.12, boxShadow: '0 0 32px 8px #38bdf8' }}
-        className="inline-block"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4, type: 'spring', stiffness: 350 }}
+        className="absolute top-10 left-10 w-32 h-32 bg-cyan-400/20 rounded-full blur-xl"
+        animate={{
+          y: [0, -20, 0],
+          x: [0, 10, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-10 right-10 w-48 h-48 bg-blue-400/20 rounded-full blur-2xl"
+        animate={{
+          y: [0, 15, 0],
+          x: [0, -15, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        className="max-w-6xl mx-auto relative z-10"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        <Link
-          to="/turnos-whatsapp"
-          className="bg-white text-blue-600 py-4 px-10 rounded-xl shadow-xl text-lg font-bold tracking-wide border-2 border-blue-200 hover:bg-blue-50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 animate-pulse"
+        {/* Main Content */}
+        <motion.div
+          className="text-center mb-12"
+          variants={fadeInUp}
         >
-          Agendar Turno
-        </Link>
+          <motion.h2
+            className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight"
+            variants={fadeInUp}
+          >
+            ¿Listo para comenzar tu{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">
+              recuperación?
+            </span>
+          </motion.h2>
+          
+          {/* Professional Quote */}
+          <motion.div
+            className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 mb-12 relative overflow-hidden"
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Quote decoration */}
+            <div className="absolute top-4 left-6 text-6xl text-cyan-300/30 font-serif">&ldquo;</div>
+            <div className="absolute bottom-4 right-6 text-6xl text-cyan-300/30 font-serif rotate-180">&rdquo;</div>
+            
+            <motion.p
+              className="text-xl md:text-2xl text-white font-medium leading-relaxed relative z-10 max-w-4xl mx-auto"
+              variants={fadeInUp}
+            >
+              <span className="text-cyan-200 font-semibold">No te acostumbres al dolor.</span>{" "}
+              Con un enfoque personalizado y terapias avanzadas, te ayudamos a recuperar tu bienestar físico y a mejorar tu calidad de vida.{" "}
+              <span className="text-cyan-200 font-semibold">Agenda tu cita hoy y siente la diferencia desde la primera sesión.</span>
+            </motion.p>
+          </motion.div>
+
+          {/* Features Grid */}
+          <motion.div
+            className="grid md:grid-cols-3 gap-6 mb-12"
+            variants={fadeInUp}
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <feature.icon className="text-white text-xl" />
+                </motion.div>
+                <p className="text-blue-200 font-medium">{feature.text}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          variants={fadeInUp}
+        >
+          {/* WhatsApp Button */}
+          <motion.a
+            href="https://wa.me/5492945416969"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full text-lg font-bold flex items-center gap-4 shadow-2xl overflow-hidden"
+            whileHover={{ 
+              scale: 1.05, 
+              boxShadow: "0 25px 50px rgba(34, 197, 94, 0.4)" 
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {/* Animated background */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: "0%" }}
+              transition={{ duration: 0.3 }}
+            />
+            
+            <FaWhatsapp className="text-2xl relative z-10" />
+            <span className="relative z-10">Agendar por WhatsApp</span>
+            
+            {/* Shine effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              initial={{ x: "-100%" }}
+              animate={{ x: "100%" }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+            />
+          </motion.a>
+
+          {/* Secondary Button */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              to="/osteopathy"
+              className="group bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
+            >
+              <FaCalendarAlt className="text-xl group-hover:rotate-12 transition-transform duration-300" />
+              Conocer Tratamientos
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Trust indicators */}
+        <motion.div
+          className="mt-12 text-center"
+          variants={fadeInUp}
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-blue-200">
+            <div className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-400" />
+              <span className="text-sm">8+ años de experiencia</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-400" />
+              <span className="text-sm">Tratamientos personalizados</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaCheckCircle className="text-green-400" />
+              <span className="text-sm">Resultados comprobados</span>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
-    </div>
-  </motion.div>
-);
+    </section>
+  );
+};
 
 export default HomeCTA;

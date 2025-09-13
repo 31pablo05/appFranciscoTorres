@@ -1,6 +1,5 @@
 // src/App.jsx
 import { Analytics } from "@vercel/analytics/react"
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -46,6 +45,7 @@ const App = () => {
                     {/* Footer siempre visible */}
                     <Footer />
                 </div>
+                <Analytics />
             </Router>
         </HelmetProvider>
     );

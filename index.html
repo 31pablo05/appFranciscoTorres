@@ -1,70 +1,295 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <!-- Establece el conjunto de caracteres a UTF-8 para soportar caracteres especiales -->
     <meta charset="UTF-8" />
     
     <!-- ✅ VERIFICACIÓN DE GOOGLE -->
-  <meta name="google-site-verification" content="U1ysgqRd4WU3hOxGoD0f4dB7SUqvarut6JZODQsb-1M" />
-
+    <meta name="google-site-verification" content="U1ysgqRd4WU3hOxGoD0f4dB7SUqvarut6JZODQsb-1M" />
 
     <!-- Meta etiqueta viewport para asegurar que la página sea responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <!-- SEO: Título de la página que aparecerá en los resultados de búsqueda -->
-    <title>Turnos Online | Osteopatía y Kinesiología</title>
+    <!-- SEO: Título optimizado para búsquedas locales -->
+    <title>Francisco Torres - Kinesiólogo y Osteópata en Esquel y Gobernador Costa | Turnos Online</title>
 
-    <!-- Descripción de la página que aparece en los resultados de búsqueda y redes sociales -->
-    <meta name="description" content="Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos." />
+    <!-- Descripción optimizada para SEO local -->
+    <meta name="description" content="Francisco Torres, kinesiólogo y osteópata profesional en Esquel y Gobernador Costa. Reserva tu turno online. Tratamientos de osteopatía, kinesiología y rehabilitación. Atención en José de San Martín, Chubut, Patagonia Argentina." />
 
-    <!-- Palabras clave relevantes para SEO -->
-    <meta name="keywords" content="osteopatía, kinesiología, salud, bienestar, turnos online" />
+    <!-- Palabras clave optimizadas para búsquedas locales -->
+    <meta name="keywords" content="Francisco Torres, kinesiólogo Esquel, osteópata Esquel, kinesiología Gobernador Costa, osteopatía Chubut, kinesiólogo José de San Martín, osteópata Patagonia, rehabilitación Esquel, fisioterapia, turnos online, tratamiento dolor espalda, terapia manual, kinesiología deportiva, osteopatía craneal" />
 
-    <!-- Autor de la página, en este caso la clínica o profesional -->
-    <meta name="Francisco Torres" content="osteopatia y kinesiologia" />
+    <!-- Autor optimizado -->
+    <meta name="author" content="Francisco Torres - Kinesiólogo y Osteópata" />
     
-    <!-- Meta para los robots de los motores de búsqueda para permitir indexar y seguir los enlaces -->
-    <meta name="robots" content="index, follow" />
+    <!-- Geo-localización para SEO local -->
+    <meta name="geo.region" content="AR-U" />
+    <meta name="geo.placename" content="Esquel, Chubut, Argentina" />
+    <meta name="geo.position" content="-42.9097;-71.3186" />
+    <meta name="ICBM" content="-42.9097, -71.3186" />
+    
+    <!-- Meta para los robots de los motores de búsqueda -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://franciscotorres-osteopatia.com" />
 
-    <!-- Open Graph: Permite personalizar cómo se muestra la página en redes sociales -->
-    <meta property="og:title" content="Turnos Online | Osteopatía y Kinesiología" />
-    <meta property="og:description" content="Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos." />
-    <!-- Imagen que se muestra en las redes sociales -->
-    <meta property="og:image" content="/src/assets/webp/osteopatia.webp" />
-    <!-- URL que se muestra en las redes sociales -->
-    <meta property="og:url" content="https://tu-dominio.com" />
-    <!-- Tipo de contenido para Open Graph (en este caso es un sitio web) -->
+    <!-- Open Graph optimizado para redes sociales -->
+    <meta property="og:title" content="Francisco Torres - Kinesiólogo y Osteópata en Esquel | Turnos Online" />
+    <meta property="og:description" content="Kinesiólogo y osteópata profesional en Esquel y Gobernador Costa. Reserva tu turno online para tratamientos de osteopatía, kinesiología y rehabilitación." />
+    <meta property="og:image" content="https://franciscotorres-osteopatia.com/assets/webp/francisco-torres-kinesiologo-esquel.webp" />
+    <meta property="og:url" content="https://franciscotorres-osteopatia.com" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Francisco Torres - Kinesiología y Osteopatía" />
 
-    <!-- Datos estructurados en formato JSON-LD: Ayudan a los motores de búsqueda a entender mejor la información de la página -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Francisco Torres - Kinesiólogo y Osteópata en Esquel" />
+    <meta name="twitter:description" content="Profesional en kinesiología y osteopatía. Turnos online en Esquel y Gobernador Costa." />
+    <meta name="twitter:image" content="https://franciscotorres-osteopatia.com/assets/webp/francisco-torres-kinesiologo-esquel.webp" />
+
+    <!-- Instagram y redes sociales -->
+    <meta property="instagram:account" content="@franciscotorresosteopatia" />
+    <meta name="instagram:creator" content="@franciscotorresosteopatia" />
+    
+    <!-- Verificación de redes sociales -->
+    <link rel="me" href="https://www.instagram.com/franciscotorresosteopatia/" />
+    <link rel="author" href="https://www.instagram.com/franciscotorresosteopatia/" />
+
+    <!-- Datos estructurados JSON-LD optimizados para negocio local -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Website",
-        "name": "Turnos Online | Osteopatía y Kinesiología",
-        "url": "https://tu-dominio.com",
-        "description": "Reserva tu turno con un profesional de la osteopatía y kinesiología. Atención personalizada y tratamientos efectivos.",
-        "author": {
-          "@type": "Organization",
-          "name": "Tu Nombre o Clínica"
+        "@type": "LocalBusiness",
+        "@id": "https://franciscotorres-osteopatia.com",
+        "name": "Francisco Torres - Kinesiología y Osteopatía",
+        "alternateName": ["Kinesiólogo Esquel", "Osteópata Esquel", "Francisco Torres Kinesiólogo"],
+        "description": "Kinesiólogo y osteópata profesional con consultorios en Esquel y Gobernador Costa. Especialista en osteopatía, kinesiología deportiva, rehabilitación y terapia manual.",
+        "url": "https://franciscotorres-osteopatia.com",
+        "telephone": "+54-2945-416969",
+        "email": "turnos@franciscotorres-osteopatia.com",
+        "image": "https://franciscotorres-osteopatia.com/assets/webp/francisco-torres-kinesiologo-esquel.webp",
+        "logo": "https://franciscotorres-osteopatia.com/assets/logo/logoFrancisco1.webp",
+        "priceRange": "$$",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Consulta direcciones disponibles",
+            "addressLocality": "Esquel",
+            "addressRegion": "Chubut",
+            "postalCode": "9200",
+            "addressCountry": "AR"
+          },
+          {
+            "@type": "PostalAddress", 
+            "streetAddress": "Consulta direcciones disponibles",
+            "addressLocality": "Gobernador Costa",
+            "addressRegion": "Chubut",
+            "postalCode": "9201",
+            "addressCountry": "AR"
+          }
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -42.9097,
+          "longitude": -71.3186
         },
-        "image": "/public/assets/webp/osteopatia.webp"
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Esquel",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Chubut"
+            }
+          },
+          {
+            "@type": "City", 
+            "name": "Gobernador Costa",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Chubut"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "José de San Martín",
+            "containedInPlace": {
+              "@type": "State", 
+              "name": "Chubut"
+            }
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "10:30",
+            "closes": "17:00",
+            "validFrom": "2024-01-01",
+            "validThrough": "2025-12-31"
+          },
+          {
+            "@type": "OpeningHoursSpecification", 
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "16:00",
+            "closes": "20:00",
+            "validFrom": "2024-01-01",
+            "validThrough": "2025-12-31"
+          }
+        ],
+        "serviceType": ["Kinesiología", "Osteopatía", "Rehabilitación", "Fisioterapia", "Terapia Manual"],
+        "medicalSpecialty": ["Kinesiología", "Osteopatía"],
+        "paymentAccepted": ["Efectivo", "Transferencia", "Mercado Pago"],
+        "currenciesAccepted": "ARS",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Kinesiología y Osteopatía",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Consulta de Osteopatía",
+                "description": "Tratamiento osteopático integral para disfunciones del sistema musculoesquelético"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sesión de Kinesiología",
+                "description": "Rehabilitación kinesiológica y fisioterapia para lesiones y dolor"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service", 
+                "name": "Terapia Manual",
+                "description": "Técnicas manuales especializadas para el tratamiento del dolor"
+              }
+            }
+          ]
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Francisco Torres",
+          "jobTitle": "Kinesiólogo y Osteópata",
+          "alumniOf": "Universidad especializada en Kinesiología y Osteopatía",
+          "sameAs": [
+            "https://www.instagram.com/franciscotorresosteopatia/",
+            "https://wa.me/5492945416969"
+          ]
+        },
+        "sameAs": [
+          "https://wa.me/5492945416969",
+          "https://www.instagram.com/franciscotorresosteopatia/"
+        ]
       }
     </script>
 
-    <!-- Favicon: Icono que aparece en la pestaña del navegador -->
+    <!-- Datos estructurados adicionales para profesional médico -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Francisco Torres - Kinesiólogo y Osteópata Esquel",
+        "description": "Profesional especializado en kinesiología y osteopatía con consultorios en Esquel y Gobernador Costa, Chubut.",
+        "medicalSpecialty": ["Kinesiología", "Osteopatía", "Rehabilitación", "Fisioterapia"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Esquel",
+          "addressRegion": "Chubut", 
+          "addressCountry": "Argentina"
+        },
+        "telephone": "+54-2945-416969",
+        "url": "https://franciscotorres-osteopatia.com"
+      }
+    </script>
+
+    <!-- Favicon optimizado -->
     <link rel="icon" type="image/webp" sizes="32x32" href="assets/webp/osteopatia.webp" />
     <link rel="icon" type="image/webp" sizes="16x16" href="assets/webp/osteopatia.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/webp/osteopatia.webp" />
     
-    <!-- Preconexión a recursos externos (mejora el rendimiento de la página cargando recursos de manera anticipada) -->
+    <!-- Preconexión a recursos externos optimizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    
+    <!-- Fuentes optimizadas -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" />
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="assets/webp/francisco1.webp" as="image" type="image/webp" />
+    <link rel="preload" href="assets/logo/logoFrancisco1.webp" as="image" type="image/webp" />
+    
+    <!-- DNS Prefetch para mejorar rendimiento -->
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link rel="dns-prefetch" href="//api.whatsapp.com" />
+    <link rel="dns-prefetch" href="//instagram.com" />
+    <link rel="dns-prefetch" href="//www.instagram.com" />
+    
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Theme color para dispositivos móviles -->
+    <meta name="theme-color" content="#0891b2" />
+    <meta name="msapplication-TileColor" content="#0891b2" />
+    
+    <!-- Optimización para rendimiento -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
     
     <!-- Script del componente React principal -->
     <script type="module" src="/src/main.jsx" defer></script>
+    
+    <!-- Google Analytics (opcional) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script> -->
   </head>
   <body>
     <!-- El div con id "root" es el contenedor donde React renderiza tu aplicación -->
     <div id="root"></div>
+    
+    <!-- Schema markup adicional para breadcrumbs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://franciscotorres-osteopatia.com"
+          },
+          {
+            "@type": "ListItem", 
+            "position": 2,
+            "name": "Kinesiología Esquel",
+            "item": "https://franciscotorres-osteopatia.com/kinesiologia"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3, 
+            "name": "Osteopatía Esquel",
+            "item": "https://franciscotorres-osteopatia.com/osteopatia"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Turnos Online",
+            "item": "https://franciscotorres-osteopatia.com/turnos"
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

@@ -1,135 +1,124 @@
-import React from "react";
 import { motion } from "framer-motion";
-import AplicacionesOsteopatia from "../components/home/AplicacionesOsteopatia";
-import Banner from "../components/home/Banner";
+import { FaHandsHelping, FaAward, FaClock } from "react-icons/fa";
 import HeroSection from "../components/home/HeroSection";
-import ExperienceHighlight from "../components/home/ExperienceHighlight";
+import Banner from "../components/home/Banner";
+import AplicacionesOsteopatia from "../components/home/AplicacionesOsteopatia";
+import TratamientoVideo from "../components/home/TratamientoVideo";
 import HomeCTA from "../components/home/HomeCTA";
-import HomeGridSection from "../components/home/HomeGridSection";
-import PropTypes from "prop-types";
-
-// Fondo animado con ondas SVG aún más altas y envolventes
-const AnimatedWavesBackground = () => (
-  <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
-    {/* Gradiente base oscuro */}
-    <div
-      className="absolute inset-0 w-full h-full"
-      style={{
-        background:
-          "linear-gradient(120deg, #1e293b 0%, #312e81 40%, #6366f1 100%)"
-      }}
-    />
-    {/* Overlay lateral para difuminar bordes */}
-    <div className="absolute inset-0 pointer-events-none" style={{
-      background: "linear-gradient(90deg, #1e293b 0%, transparent 10%, transparent 90%, #6366f1 100%)",
-      opacity: 0.55,
-      zIndex: 2
-    }} />
-    {/* Ondas SVG animadas, cubriendo más alto y superpuestas */}
-    <svg className="absolute left-0 w-full h-full" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ pointerEvents: 'none' }}>
-      <defs>
-        <linearGradient id="waveGradient1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.7" />
-          <stop offset="100%" stopColor="#6366f1" stopOpacity="0.8" />
-        </linearGradient>
-        <linearGradient id="waveGradient2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#818cf8" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#312e81" stopOpacity="0.7" />
-        </linearGradient>
-        <linearGradient id="waveGradient3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#6366f1" stopOpacity="0.5" />
-        </linearGradient>
-      </defs>
-      {/* Onda más alta, cubre hasta 200px del top */}
-      <path fill="url(#waveGradient3)" opacity="0.5">
-        <animate attributeName="d" dur="18s" repeatCount="indefinite"
-          values="M0,200 Q360,100 720,200 T1440,200 V900 H0Z;
-                  M0,150 Q360,250 720,150 T1440,200 V900 H0Z;
-                  M0,200 Q360,100 720,200 T1440,200 V900 H0Z" />
-      </path>
-      {/* Onda intermedia, cubre hasta 350px del top */}
-      <path fill="url(#waveGradient1)" opacity="0.7">
-        <animate attributeName="d" dur="14s" repeatCount="indefinite"
-          values="M0,350 Q360,250 720,350 T1440,350 V900 H0Z;
-                  M0,300 Q360,400 720,300 T1440,350 V900 H0Z;
-                  M0,350 Q360,250 720,350 T1440,350 V900 H0Z" />
-      </path>
-      {/* Onda inferior, cubre hasta 600px del top */}
-      <path fill="url(#waveGradient2)" opacity="0.8">
-        <animate attributeName="d" dur="10s" repeatCount="indefinite"
-          values="M0,600 Q360,650 720,600 T1440,600 V900 H0Z;
-                  M0,600 Q360,700 720,600 T1440,600 V900 H0Z;
-                  M0,600 Q360,650 720,600 T1440,600 V900 H0Z" />
-      </path>
-    </svg>
-  </div>
-);
-
-const Section = ({ title, children, className }) => (
-  <section className={`py-16 px-6 bg-gradient-to-br from-blue-50 to-white rounded-3xl shadow-xl mb-12 ${className}`}>
-    <h2 className="text-4xl md:text-5xl font-semibold text-blue-700 drop-shadow-md text-center md:text-left mb-4">
-      {title}
-    </h2>
-    <div className="mt-6 text-xl leading-loose text-gray-700">{children}</div>
-  </section>
-);
-
-Section.propTypes = {
-  title: PropTypes.node.isRequired,
-  children: PropTypes.node,
-  className: PropTypes.string
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } }
-};
 
 const Home = () => {
-  return (
-    <div className="relative flex flex-col items-center font-sans min-h-screen bg-transparent overflow-x-hidden">
-      {/* Fondo animado con ondas SVG azules y violetas */}
-      <AnimatedWavesBackground />
-      {/* Wrapper para contenido principal */}
-      <div className="relative w-full flex flex-col items-center">
-        <div className="relative z-10 flex flex-col items-center w-full">
-          {/* Hero Section modularizado */}
-          <HeroSection />
-          {/* Experiencia destacada modularizada */}
-          <ExperienceHighlight />
-          {/* Aplicaciones de la osteopatía */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            viewport={{ once: true }}
-            className="w-full"
-          >
-            <AplicacionesOsteopatia />
-          </motion.div>
-          {/* Banner con horarios de atención */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="w-full"
-          >
-            <Banner />
-          </motion.div>
-          {/* Separación extra en mobile entre Banner y Beneficios */}
-          <div className="h-8 md:h-0" />
-          {/* Grid de Beneficios, Imagen y FAQ modularizado */}
-          <HomeGridSection />
-          {/* Espacio extra antes del CTA */}
-          <div className="h-10 md:h-16" />
-          {/* CTA modularizado */}
-          <HomeCTA />
-        </div>
-      </div>
+  // Animaciones
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, type: 'spring', stiffness: 80 } },
+  };
 
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const cardHover = {
+    rest: { scale: 1, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" },
+    hover: { 
+      scale: 1.05, 
+      boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+      transition: { duration: 0.3 }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-teal-600 relative overflow-hidden">
       
+      {/* HERO SECTION MODULARIZADO */}
+      <HeroSection />
+
+      {/* BANNER DE HORARIOS MODULARIZADO */}
+      <Banner />
+
+      {/* APLICACIONES OSTEOPATÍA MODULARIZADO */}
+      <AplicacionesOsteopatia />
+
+      {/* TRATAMIENTO VIDEO MODULARIZADO */}
+      <TratamientoVideo />
+
+      {/* SECCIÓN DE SERVICIOS DESTACADOS */}
+      <section className="py-20 px-4 sm:px-6 bg-white/5 backdrop-blur-sm">
+        <motion.div
+          className="max-w-7xl mx-auto"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div variants={fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              ¿Por qué elegir nuestros servicios?
+            </h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Combinamos técnicas avanzadas con un enfoque personalizado para cada paciente
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: FaHandsHelping,
+                title: "Tratamiento Personalizado",
+                description: "Cada sesión está diseñada específicamente para tus necesidades y objetivos de recuperación."
+              },
+              {
+                icon: FaAward,
+                title: "Experiencia Comprobada",
+                description: "Más de 8 años tratando pacientes con técnicas de osteopatía y kinesiología actualizadas."
+              },
+              {
+                icon: FaClock,
+                title: "Horarios Flexibles",
+                description: "Adaptamos nuestros horarios para que puedas acceder al tratamiento cuando lo necesites."
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="group"
+              >
+                <motion.div
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-center h-full"
+                  variants={cardHover}
+                  initial="rest"
+                  whileHover="hover"
+                >
+                  <motion.div
+                    className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <service.icon className="text-2xl text-blue-900" />
+                  </motion.div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-blue-200 leading-relaxed">
+                    {service.description}
+                  </p>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* CALL TO ACTION FINAL - COMPONENTE MODULARIZADO */}
+      <HomeCTA />
     </div>
   );
 };
