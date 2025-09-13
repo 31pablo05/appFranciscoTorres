@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Optimizado para Google Search Console
+Sitemap: https://franciscotorres.vercel.app/sitemap.xml
+
+# Prevenir indexación de archivos técnicos
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.vercel/
+
+# Permitir rastreadores específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Priorizar URLs importantes
+# Homepage: https://franciscotorres.vercel.app/
+# Servicios: https://franciscotorres.vercel.app/osteopathy
+# Sobre Francisco: https://franciscotorres.vercel.app/about
+# Turnos: https://franciscotorres.vercel.app/turnos
